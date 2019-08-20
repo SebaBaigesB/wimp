@@ -5,7 +5,8 @@ puts "Creating restaurants"
 10.times do
   name = Faker::Restaurant.name
   type = Faker::Restaurant.type
-  r = Restaurant.new(user: user, name: name, food_style: type)
+  address = "Bordeaux"
+  r = Restaurant.new(user: user, name: name, food_style: type, address: address)
   r.save
   # desc = Faker::Restaurant.description
 end
