@@ -1,4 +1,22 @@
-<div class="container">
-  <h1>What's in my plate ?</h1>
-  <p>See all restaurants informations in your language</p>
+<div class="container ">
+  <%= link_to "Chef", restaurants_path, class: "btn"%>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="flags">
+        <a href=""class="country_flags"><%= image_tag "united-kingdom.png", alt: "united-kingdom", width: 50%></a>
+        <a href=""class="country_flags"><%= image_tag "france.png", alt: "france", width: 50 %></a>
+        <a href=""class="country_flags"><%= image_tag "germany.png", alt: "germany", width: 50 %></a>
+        <a href=""class="country_flags"><%= image_tag "italy.png", alt: "italy", width: 50 %></a>
+        <a href=""class="country_flags"><%= image_tag "japan.png", alt: "japan", width: 50 %></a> <br>
+        <a href=""class="country_flags"><%= image_tag "portugal.png", alt: "portugal", width: 50 %></a>
+        <a href=""class="country_flags"><%= image_tag "south-korea.png", alt: "south-korea", width: 50 %></a>
+        <a href=""class="country_flags"><%= image_tag "spain.png", alt: "spain", width: 50 %></a>
+        <a href=""class="country_flags"><%= image_tag "china.png", alt: "china", width: 50 %></a>
+      </div>
+    </div>
+  </div>
+  <div class="def">
+    <p>See all restaurants informations in your language</p>
+  </div>
 </div>
