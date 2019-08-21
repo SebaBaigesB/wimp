@@ -7,6 +7,4 @@ class TagsController < ApplicationController
     session[:tag_ids] = params[:tags_session][:tags][1..-1]
     redirect_to restaurants_path
   end
-
-
 end
