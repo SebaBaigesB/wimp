@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Tag.destroy_all
+
+Tag.create!(title: "Tree nut", category: 0)
+Tag.create!(title: "Peanut", category: 0)
+Tag.create!(title: "Milk", category: 0)
+Tag.create!(title: "Egg", category: 0)
+Tag.create!(title: "Soy", category: 0)
+Tag.create!(title: "Wheat", category: 0)
+Tag.create!(title: "Fruit", category: 0)
+Tag.create!(title: "Alpha-gal", category: 0)
+Tag.create!(title: "Corn", category: 0)
+Tag.create!(title: "Garlic", category: 0)
+

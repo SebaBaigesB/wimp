@@ -1,3 +1,35 @@
+
+<%#= simple_form_for :tags_session, url: tags_save_with_session_path, method: :get do |f| %>
+  <%#= f.input :tags, collection: Tag.all, as: :check_boxes %>
+  <%#= f.button :submit %>
+<%# end %>
+
+
+<%= simple_form_for :tags_session, url: tags_save_with_session_path, method: :get do |f| %>
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <fieldset class="form-group check_boxes required tags_session_tags">
+
+
+    <input type="hidden" name="tags_session[tags][]" value="" />
+
+    <div class="funkyradio">
+      <div class="funkyradio-warning">
+        <div class="form-check form-check-inline box-size">
+        <% Tag.all.each_with_index do |tag, i| %>
+          <div class="form-check">
+            <input class="form-check-input check_boxes required" type="checkbox" value="<%= tag.id %>" name="tags_session[tags][]" id="tags_session_tags_<%= i %>" />
+            <label class="collection_check_boxes" for="tags_session_tags_<%= i %>"><%= tag.title %></label>
+          </div>
+        <% end %>
+      </div>
+    </div>
+     </div>
+
+  </fieldset>
+  <%= f.button :submit %>
+<% end %>
+
+
 <div class="container">
     <br>
     <h2 class="text-center">Do you have any allergies ?</h2>
