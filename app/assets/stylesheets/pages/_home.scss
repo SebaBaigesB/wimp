@@ -2,35 +2,22 @@
 body {
   background-image: image-url('back.jpg');
   background-repeat: no-repeat;
-  background-size: 325px;
+  background-size: 375px;
 }
 
 .container{
  width: 300px
 }
 
-.btn {
-  position: absolute;
-  top: 20px;
-  left: 265px;
-  font-size: 16px;
-  font-family: parisienne;
-}
-
 .flags {
-  margin-top: 240px;
-  display: flex;
-  flex-direction: row;
-  padding-right: 10px;
+  margin-top: 280px;
+  opacity: 0.6;
 }
 
-.country_flags {
-  padding-right: 24px;
+.col-3 {
+  padding: 10px;
 }
 
-.def {
-  font-size: 14px;
-  font-family: parisienne;
-  text-align: center;
-  margin-top: 388px;
-}
+
+
+
