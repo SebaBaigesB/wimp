@@ -1,5 +1,5 @@
 // Specific CSS for your home-page
-body {
+.background-container {
   background-image: image-url('back.jpg');
   background-repeat: no-repeat;
   background-size: 375px;
@@ -10,7 +10,7 @@ body {
 }
 
 .flags {
-  margin-top: 280px;
+  padding-top: 280px;
   opacity: 0.6;
 }
 
