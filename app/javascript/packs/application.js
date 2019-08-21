@@ -14,3 +14,12 @@ mapButton.addEventListener('click', (e) => {
     map.style.display = 'block';
   } else map.style.display = 'none';
 })
+
+
+const food = document.getElementById('food');
+
+food.addEventListener('click', () => {
+  if (map.style.display === 'none') {
+    map.style.display = 'block';
+  } else map.style.display = 'none';
+})
