@@ -17,7 +17,6 @@ gem 'webpacker'
 gem 'cloudinary', '~> 1.9.1'
 gem 'dotenv-rails', groups: [:development, :test]
 
-
 gem 'devise'
 gem 'geocoder'
 
