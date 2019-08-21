@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_08_21_143538) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -47,7 +46,6 @@ ActiveRecord::Schema.define(version: 2019_08_21_143538) do
     t.string "photos"
     t.bigint "user_id"
     t.datetime "created_at", null: false
-    t.datetime "updated_atrest", null: false
     t.datetime "updated_at", null: false
     t.integer "course"
     t.index ["user_id"], name: "index_restaurants_on_user_id"
