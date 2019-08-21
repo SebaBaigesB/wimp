@@ -16,10 +16,10 @@ mapButton.addEventListener('click', (e) => {
 })
 
 
-const food = document.getElementById('food');
+// const food = document.getElementById('food');
 
-food.addEventListener('click', () => {
-  if (map.style.display === 'none') {
-    map.style.display = 'block';
-  } else map.style.display = 'none';
-})
+// food.addEventListener('click', () => {
+//   if (map.style.display === 'none') {
+//     map.style.display = 'block';
+//   } else map.style.display = 'none';
+// })
