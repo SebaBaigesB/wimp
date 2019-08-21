@@ -1,4 +1,5 @@
 class TagsController < ApplicationController
-  def show
+  def index
+    @tags = Tag.all
   end
 end
