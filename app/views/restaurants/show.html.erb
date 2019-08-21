@@ -1,2 +1,49 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1517142099008-c2eb9227b575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);">
+    <div class="container">
+      <h1><%= @restaurant.name %></h1>
+    </div>
+  </div>
+  <div class="restaurant">
+  <div class="container">
+    <div class="description">
+      <a class="btn btn-chief" href="#">Chef</a>
+      <p>Descripion: <%= @restaurant.description %></p>
+      </div>
+    <div class="menu">
+      <div class="starter">
+        <div class="cards">
+          <% @meals.each do |meal| %>
+           <div class="card-category"
+               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
+              <h3>Starter-show</h3>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="main-course">
+        <div class="cards">
+          <% @meals.each do |meal| %>
+           <div class="card-category"
+               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
+              <h3>Main-show</h3>
+            </div>
+          <% end %>
+        </div>
+
+      </div>
+      <div class="dessert">
+        <div class="cards">
+          <% @meals.each do |meal| %>
+           <div class="card-category"
+               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
+              <h3>Dessert-show</h3>
+            </div>
+          <% end %>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
