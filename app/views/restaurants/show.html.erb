@@ -8,36 +8,45 @@
   <div class="container">
     <div class="description">
       <a class="btn btn-chief" href="#">Chef</a>
-      <p>Descripion: <%= @restaurant.description %></p>
+      <h5>Descripion:</h5>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.
+
+      <%= @restaurant.description %></p>
       </div>
     <div class="menu">
       <div class="starter">
+        <h1>Starter</h1>
         <div class="cards">
           <% @meals.each do |meal| %>
            <div class="card-category"
-               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
-              <h3>Starter-show</h3>
+               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=653&q=80);">
+              <h3>Starter-show (link)</h3>
             </div>
           <% end %>
         </div>
       </div>
       <div class="main-course">
+        <h1>Main-Course</h1>
         <div class="cards">
           <% @meals.each do |meal| %>
            <div class="card-category"
-               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
-              <h3>Main-show</h3>
+               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);">
+              <h3>Main-show (link)</h3>
             </div>
           <% end %>
         </div>
 
       </div>
       <div class="dessert">
+        <h1>Dessert</h1>
         <div class="cards">
           <% @meals.each do |meal| %>
            <div class="card-category"
-               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))">
-              <h3>Dessert-show</h3>
+               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=687&q=80);">
+              <h3>Dessert-show (link)</h3>
             </div>
           <% end %>
         </div>
