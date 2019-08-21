@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @restaurants = Restaurant.all
     @restaurants_geo = Restaurant.geocoded
@@ -14,5 +14,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
+    @restaurant = Restaurant.find(params[:id])
+    @meals = Meal.all
   end
 end
