@@ -10,3 +10,8 @@ en:
         food: "Food Style"
         dist: "Distance"
         allergi: "Allergy"
+    show:
+        descr: "Description :"
+        start: "Starters"
+        main: "Main-Courses"
+        dess: "Desserts"
