@@ -3,7 +3,7 @@ class CreateTags < ActiveRecord::Migration[5.2]
     create_table :tags do |t|
       t.string :title
       t.string :icon
-      t.string :category
+      t.integer :category
 
       t.timestamps
     end
