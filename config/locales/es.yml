@@ -1,0 +1,8 @@
+es:
+  tags:
+    index:
+        do: "Usted tiene"
+        allergi: "alergias ?"
+        food: "Preferencias culinarias ?"
+        valid: "Validar !"
+        skip: "Omitir"

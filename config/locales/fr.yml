@@ -1,0 +1,8 @@
+fr:
+  tags:
+    index:
+        do: "Avez-vous des"
+        allergi: "allergies ?"
+        food: "Préférences culinaires ?"
+        valid: "Valider !"
+        skip: "Passer"
