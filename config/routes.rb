@@ -19,3 +19,4 @@ scope '(:locale)', locale: /fr|es/ do
   get "/tags/save-with-session", to: "tags#save_with_session"
 end
 end
+
