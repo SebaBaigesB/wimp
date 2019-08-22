@@ -12,12 +12,14 @@
       <p> Dans une ambiance chaleureuse et décontractée plonger dans  un décor au cadre idyllique unique et convivial.
       Venez découvrir la cuisine du moment, raffinée,  gastronomique moderne mais aussi traditionnelle.
 
-      <%= @restaurant.description %></p>
-      </div>
+      <%= @restaurant.description %>
+
+      </p>
+    </div>
     <div class="menu">
-      <div class="starter">
-        <h1>Starter</h1>
-        <div class="cards d-none">
+      <div class="starter p-2">
+        <h1>Starter</h1> <i class="fas fa-plus"></i> <!-- <i class="fal fa-minus"></i> -->
+        <div class="cards ">
           <% @meals.each do |meal| %>
            <div class="card-category"
                  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=653&q=80);">
@@ -46,9 +48,8 @@
           <% end %>
         </div>
       </div>
-      <br>
-      <div class="main-course">
-        <h1>Main-Course</h1>
+      <div class="main-course p-2">
+        <h1>Main-Course</h1> <i class="fas fa-plus"></i> <!-- <i class="fal fa-minus"></i> -->
         <div class="cards d-none">
           <% @meals.each do |meal| %>
            <div class="card-category"
@@ -78,9 +79,8 @@
           <% end %>
         </div>
       </div>
-      <br>
-      <div class="dessert">
-        <h1>Dessert</h1>
+      <div class="dessert p-2">
+        <h1>Dessert</h1> <i class="fas fa-plus"></i> <!-- <i class="fal fa-minus"></i> -->
         <div class="cards d-none">
           <% @meals.each do |meal| %>
            <div class="card-category"
