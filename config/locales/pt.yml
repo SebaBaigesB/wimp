@@ -1,0 +1,7 @@
+pt:
+  tags:
+    index:
+        allergi: "Você tem alguma alergia ?"
+        food: "Preferências alimentares?"
+        valid: "Valide!"
+        skip: "Pule esta parte"

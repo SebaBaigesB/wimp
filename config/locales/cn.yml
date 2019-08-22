@@ -1,0 +1,8 @@
+cn:
+  tags:
+    index:
+        allergi: "你对什么过敏吗 ？"
+        food: "食物偏好？"
+        valid: "验证！"
+        skip: "跳过这部分"
+
