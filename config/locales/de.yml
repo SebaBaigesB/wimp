@@ -1,0 +1,7 @@
+de:
+  tags:
+    index:
+        allergi: "Hast du irgendwelche Allergien ?"
+        food: "Essensvorlieben?"
+        valid: "Bestätigen Sie!"
+        skip: "Überspringen"
