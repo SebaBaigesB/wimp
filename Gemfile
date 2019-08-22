@@ -15,7 +15,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'cloudinary', '~> 1.9.1'
-
+gem 'globalize'
 gem 'devise'
 gem 'geocoder'
 gem 'devise-i18n'

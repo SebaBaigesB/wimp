@@ -1,3 +1,12 @@
 en:
-  do: "Do you have any"
-  allergy: "allergies ?"
+  tags:
+    index:
+        allergi: "Do you have any allergies ?"
+        food: "Food preferences ?"
+        valid: "Validate !"
+        skip: "Skip this part"
+  restaurants:
+    index:
+        food: "Food Style"
+        dist: "Distance"
+        allergi: "Allergy"

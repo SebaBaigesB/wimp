@@ -1,3 +1,7 @@
 es:
-  do: "Do you have any"
-  allergy: "allergies ?"
+  tags:
+    index:
+        allergi: "Usted tiene alergias ?"
+        food: "Preferencias culinarias ?"
+        valid: "Validar !"
+        skip: "Omitir"

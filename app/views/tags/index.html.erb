@@ -5,7 +5,7 @@
         <input type="hidden" name="tags_session[tags][]" value="" />
         <div class="funky">
             <div class="funky-warning">
-              <h2 class="text-center">Do you have any <br> allergies ?</h2>
+              <h2 class="text-center"><%= t('.allergi') %> </h2>
               <% tags = Tag.where(status: :allergy) %>
                 <% tags.each_with_index do |tag| %>
                 <div class="form-check form-check-inline box-size">
@@ -15,7 +15,7 @@
                 </div>
                 <% end %>
                  <% tags2 = Tag.where(status: :category) %>
-                 <h2 class="text-center">Food Preferences?</h2>
+                 <h2 class="text-center"><%= t('.food') %> </h2>
                 <% tags2.each_with_index do |tag| %>
                 <div class="form-check form-check-inline box-size">
                     <input class="form-check-input check_boxes required" type="checkbox" value="<%= tag.id %>" name="tags_session[tags][]" id="tags_session_tags_<%= tag.id %>" />
@@ -27,9 +27,9 @@
         </div>
 
 </fieldset>
-  <div class="subutton justify-content-end"><%= f.button :submit, 'Validate!' %></div>
+  <div class="subutton justify-content-end"><%= f.button :submit, t('.valid') %></div>
 <% end %>
 </div>
 <div class="container" id="skip">
-    <%= link_to "Skip this part", restaurants_path, method: :get, class: "button2" %>
+    <%= link_to t('.skip'), restaurants_path, method: :get, class: "button2" %>
 </div>
