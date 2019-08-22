@@ -1,4 +1,4 @@
-class Owners::RestaurantsController < ApplicationController
+class Owner::RestaurantsController < ApplicationController
   def index
   end
 
