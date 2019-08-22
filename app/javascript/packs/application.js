@@ -5,4 +5,17 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
 
+mapButton.addEventListener('click', (e) => {
+  if (map.style.display === 'none') {
+    map.style.display = 'block';
+  } else map.style.display = 'none';
+})
 
+
+// const food = document.getElementById('food');
+
+// food.addEventListener('click', () => {
+//   if (map.style.display === 'none') {
+//     map.style.display = 'block';
+//   } else map.style.display = 'none';
+// })

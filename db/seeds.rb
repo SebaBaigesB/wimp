@@ -5,7 +5,7 @@ user = User.create(email: 'coco@example.com', password: 'azerty')
 puts "Creating restaurants"
 10.times do
   name = Faker::Restaurant.name
-  type = Faker::Restaurant.type
+  type = "japanese"
   address = "Bordeaux"
   r = Restaurant.new(user: user, name: name, food_style: type, address: address)
   r.save
@@ -23,6 +23,8 @@ puts "Creating meals"
   mc.save
   d.save
 end
+
+puts "Creating tags"
 Tag.destroy_all
 
 Tag.create!(title: "Tree nut", status: 0)
