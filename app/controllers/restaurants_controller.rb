@@ -1,7 +1,11 @@
 class RestaurantsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @restaurants = Restaurant.all
+    if params[:restaurants_index]
+      @restaurants = Restaurant.where(food_style: params[:restaurants_index][:restaurants])
+    else
+      @restaurants = Restaurant.all
+    end
     @restaurants_geo = Restaurant.geocoded
 
     @markers = @restaurants_geo.map do |restaurant|
