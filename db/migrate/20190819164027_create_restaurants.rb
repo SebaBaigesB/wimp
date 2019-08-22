@@ -7,7 +7,7 @@ class CreateRestaurants < ActiveRecord::Migration[5.2]
       t.string :description
       t.float :longitude
       t.float :latitude
-      t.string :food_style
+      t.integer :food_style
       t.string :menu_language
       t.string :photos
       t.references :user, foreign_key: true
