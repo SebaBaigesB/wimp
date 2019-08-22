@@ -1,58 +1,127 @@
 
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1517142099008-c2eb9227b575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);">
-    <div class="container">
-      <h1><%= @restaurant.name %></h1>
-    </div>
-  </div>
-  <div class="restaurant">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1526234362653-3b75a0c07438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80);">
   <div class="container">
+    <h1><%= @restaurant.name %></h1>
+  </div>
+</div>
+
+<div class="restaurant">
+  <div class="container p-2">
     <div class="description">
-      <a class="btn btn-chief" href="#">Chef</a>
-      <h5>Descripion:</h5>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat.
+      <%= link_to "X", restaurants_path, class: "btn btn-back"%>
+      <h3>Description:</h3>
+      <p> Dans une ambiance chaleureuse et décontractée plonger dans  un décor au cadre idyllique unique et convivial.
+      Venez découvrir la cuisine du moment, raffinée,  gastronomique moderne mais aussi traditionnelle.
 
-      <%= @restaurant.description %></p>
-      </div>
-    <div class="menu">
-      <div class="starter">
-        <h1>Starter</h1>
-        <div class="cards">
-          <% @meals.each do |meal| %>
-           <div class="card-category"
-               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=653&q=80);">
-              <h3>Starter-show (link)</h3>
-            </div>
-          <% end %>
-        </div>
-      </div>
-      <div class="main-course">
-        <h1>Main-Course</h1>
-        <div class="cards">
-          <% @meals.each do |meal| %>
-           <div class="card-category"
-               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);">
-              <h3>Main-show (link)</h3>
-            </div>
-          <% end %>
-        </div>
-
-      </div>
-      <div class="dessert">
-        <h1>Dessert</h1>
-        <div class="cards">
-          <% @meals.each do |meal| %>
-           <div class="card-category"
-               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=687&q=80);">
-              <h3>Dessert-show (link)</h3>
-            </div>
-          <% end %>
-        </div>
-
-      </div>
-
+      <%= @restaurant.description %>
+      </p>
     </div>
+
+    <div class="menu">
+      <div class="starter p-2">
+        <a  data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><h1>Starter +</h1></a>
+        <div class="collapse" id="collapseExample">
+          <div class="cards ">
+            <% @meals.each do |meal| %>
+             <div class="card-category"
+                 style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80);">
+               <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal">
+               <%= meal.name %>
+               </button>
+               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                     <div class="modal-header">
+                       <h5 class="modal-title" id="exampleModalLabel"><%= meal.name %></h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                       </button>
+                     </div>
+                     <div class="modal-body">
+                       ...
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn" data-dismiss="modal">Ok</button>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-course p-2">
+        <a  data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2"><h1>Main-Course +</h1></a>
+        <div class="collapse" id="collapseExample2">
+          <div class="cards ">
+            <% @meals.each do |meal| %>
+             <div class="card-category"
+                 style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);">
+               <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal">
+                <%= meal.name %>
+               </button>
+               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                     <div class="modal-header">
+                       <h5 class="modal-title" id="exampleModalLabel"><%= meal.name %></h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                       </button>
+                     </div>
+                     <div class="modal-body">
+                       ...
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn" data-dismiss="modal">Ok</button>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="dessert p-2">
+        <div class="starter p-2">
+          <a  data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3"><h1>Dessert +</h1></a>
+          <div class="collapse" id="collapseExample3">
+            <div class="cards ">
+            <% @meals.each do |meal| %>
+              <div class="card-category"
+                 style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+               <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal">
+                <%= meal.name %>
+               </button>
+               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                     <div class="modal-header">
+                       <h5 class="modal-title" id="exampleModalLabel"><%= meal.name %></h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                       </button>
+                     </div>
+                     <div class="modal-body">
+                       ...
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn" data-dismiss="modal">Ok</button>
+                     </div>
+                   </div>
+                 </div>
+                </div>
+              </div>
+            <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
