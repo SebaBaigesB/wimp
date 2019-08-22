@@ -1,10 +1,11 @@
 
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1526234362653-3b75a0c07438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80);">
-    <div class="container">
-      <h1><%= @restaurant.name %></h1>
-    </div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1526234362653-3b75a0c07438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80);">
+  <div class="container">
+    <h1><%= @restaurant.name %></h1>
   </div>
-  <div class="restaurant">
+</div>
+
+<div class="restaurant">
   <div class="container p-2">
     <div class="description">
       <%= link_to "X", restaurants_path, class: "btn btn-back"%>
@@ -13,78 +14,51 @@
       Venez découvrir la cuisine du moment, raffinée,  gastronomique moderne mais aussi traditionnelle.
 
       <%= @restaurant.description %>
-
       </p>
     </div>
+
     <div class="menu">
       <div class="starter p-2">
-        <h1>Starter</h1> <i class="fas fa-plus"></i> <!-- <i class="fal fa-minus"></i> -->
-        <div class="cards ">
-          <% @meals.each do |meal| %>
-           <div class="card-category"
-                 style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=653&q=80);">
-              <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal">
+        <a  data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><h1>Starter +</h1></a>
+        <div class="collapse" id="collapseExample">
+          <div class="cards ">
+            <% @meals.each do |meal| %>
+             <div class="card-category"
+                 style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80);">
+               <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal">
                <%= meal.name %>
-              </button>
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title text-dark" id="exampleModalLabel"><%= meal.name %> - <%= meal.price %> €</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body text-secondary">
-                      ... <%= meal.description %>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn" data-dismiss="modal">Ok</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-      <div class="main-course p-2">
-        <h1>Main-Course</h1> <i class="fas fa-plus"></i> <!-- <i class="fal fa-minus"></i> -->
-        <div class="cards d-none">
-          <% @meals.each do |meal| %>
-           <div class="card-category"
-               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);">
-             <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal">
-              <%= meal.name %>
-             </button>
-             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-               <div class="modal-dialog" role="document">
-                 <div class="modal-content">
-                   <div class="modal-header">
-                     <h5 class="modal-title" id="exampleModalLabel"><%= meal.name %></h5>
-                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                       <span aria-hidden="true">&times;</span>
-                     </button>
-                   </div>
-                   <div class="modal-body">
-                     ...
-                   </div>
-                   <div class="modal-footer">
-                     <button type="button" class="btn" data-dismiss="modal">Ok</button>
+               </button>
+               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                     <div class="modal-header">
+                       <h5 class="modal-title" id="exampleModalLabel"><%= meal.name %></h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                       </button>
+                     </div>
+                     <div class="modal-body">
+                       ...
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn" data-dismiss="modal">Ok</button>
+                     </div>
                    </div>
                  </div>
                </div>
-             </div>
-            </div>
-          <% end %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
-      <div class="dessert p-2">
-        <h1>Dessert</h1> <i class="fas fa-plus"></i> <!-- <i class="fal fa-minus"></i> -->
-        <div class="cards d-none">
-          <% @meals.each do |meal| %>
-           <div class="card-category"
-               style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=687&q=80);">
+
+      <div class="main-course p-2">
+        <a  data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2"><h1>Main-Course +</h1></a>
+        <div class="collapse" id="collapseExample2">
+          <div class="cards ">
+            <% @meals.each do |meal| %>
+             <div class="card-category"
+                 style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);">
                <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal">
                 <%= meal.name %>
                </button>
@@ -106,11 +80,48 @@
                    </div>
                  </div>
                </div>
-            </div>
-          <% end %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
 
+      <div class="dessert p-2">
+        <div class="starter p-2">
+          <a  data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3"><h1>Dessert +</h1></a>
+          <div class="collapse" id="collapseExample3">
+            <div class="cards ">
+            <% @meals.each do |meal| %>
+              <div class="card-category"
+                 style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+               <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal">
+                <%= meal.name %>
+               </button>
+               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                     <div class="modal-header">
+                       <h5 class="modal-title" id="exampleModalLabel"><%= meal.name %></h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                       </button>
+                     </div>
+                     <div class="modal-body">
+                       ...
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn" data-dismiss="modal">Ok</button>
+                     </div>
+                   </div>
+                 </div>
+                </div>
+              </div>
+            <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>
