@@ -22,33 +22,12 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Choose the food style you would like the eat</h5>
+        <h5 class="modal-title" id="exampleModalLabel"><%= t('.choose') %></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-       <!--  <div class="toggle-container">
-          <input id="toggle1" type="checkbox">
-          <label for="toggle1">French</label>
-
-          <input id="toggle2" type="checkbox">
-          <label for="toggle2">Italian</label>
-
-          <input id="toggle3" type="checkbox">
-          <label for="toggle3">Japanese</label>
-
-          <input id="toggle4" type="checkbox">
-          <label for="toggle4">Chinese</label>
-
-          <input id="toggle5" type="checkbox">
-          <label for="toggle5">Tapas</label>
-
-          <input id="toggle6" type="checkbox">
-          <label for="toggle6">Others</label>
-        </div>
-      </div> -->
-
       <div class="toggle-container">
         <%= simple_form_for :restaurant_index, url: restaurants_path, method: :get do |f| %>
         <input name="utf8" type="hidden" value="&#x2713;" />

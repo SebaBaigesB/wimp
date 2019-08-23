@@ -9,7 +9,8 @@ en:
     index:
         food: "Food Style"
         dist: "Distance"
-        allergi: "Allergy"
+        allergy: "Allergy"
+        choose: "Choose the food style you would like the eat"
     show:
         descr: "Description :"
         start: "Starters"
