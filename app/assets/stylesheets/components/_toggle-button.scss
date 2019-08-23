@@ -56,21 +56,6 @@
   transition: background-color .2s;
 }
 
-// label:first-of-type {
-//   transform: translateX(-40px);
-// }
-
-// label:last-of-type {
-//   transform: translateX(40px);
-// }
-
-// label:hover, input:focus + label {
-//   box-shadow: 0 0 20px rgba(0, 0, 0, .6);
-// }
-
-// input:checked + label {
-//   background-color: #57ab6c;
-// }
 
 .restaurant input:checked + label::before {
   background-color: #fff;

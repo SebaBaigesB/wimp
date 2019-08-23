@@ -20,7 +20,7 @@ gem 'devise'
 gem 'geocoder'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
-
+gem 'faker'
 
 gem "google-cloud-translate"
 
@@ -35,5 +35,4 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
-  gem 'faker'
 end
