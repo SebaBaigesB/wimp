@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [:index, :save_with_session]
   def index
     @tags = Tag.all
   end
