@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   devise_for :users
   root to: 'pages#home'
 
@@ -10,6 +9,7 @@ Rails.application.routes.draw do
       end
     end
     resources :tags, only: [:index]
+    master
     namespace :owner do
       resources :restaurants
       resources :meals
