@@ -22,12 +22,12 @@
   transform: translate(-50%, -50%); // Modifie la position des boxs
 }
 
-input {
+.input2 {
   position: absolute;
   left: -9999px;
 }
 
-label {
+.label2 {
   display: block;
   position: relative;
   margin: 12px;
@@ -43,7 +43,7 @@ label {
   // transition: background-color .2s, box-shadow .2s;
 }
 
-label::before {
+.label2::before {
   content: '';
   display: block;
   position: absolute;
@@ -64,14 +64,21 @@ label::before {
 //   transform: translateX(40px);
 // }
 
-label:hover, input:focus + label {
-  box-shadow: 0 0 20px rgba(0, 0, 0, .6);
-}
+// label:hover, input:focus + label {
+//   box-shadow: 0 0 20px rgba(0, 0, 0, .6);
+// }
 
-input:checked + label {
-  background-color: #57ab6c;
-}
+// input:checked + label {
+//   background-color: #57ab6c;
+// }
 
+<<<<<<< owners-crud
+// input:checked + label::before {
+//   background-color: #fff;
+// }
+
+=======
 input:checked + label::before {
   background-color: #fff;
 }
+>>>>>>> master
