@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2019_08_21_143538) do
     t.string "description"
     t.float "longitude"
     t.float "latitude"
-    t.string "food_style"
+    t.integer "food_style"
     t.string "menu_language"
     t.string "photos"
     t.bigint "user_id"
