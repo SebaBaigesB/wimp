@@ -1,10 +1,9 @@
-class Owner::RestaurantsController < ApplicationController
+class Owners::RestaurantsController < ApplicationController
   def index
   end
 
   def show
     @restaurants = Restaurant.where(user: current_user)
-    @restaurants
   end
 
   def new
