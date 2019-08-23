@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       end
     end
     resources :tags, only: [:index]
-    namespace :owner do
+    namespace :owners do
       resources :restaurants
       resources :meals
     end
