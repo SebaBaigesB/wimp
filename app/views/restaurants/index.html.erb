@@ -17,6 +17,7 @@
       <a href="tags" class="tab-underlined"><%= t('.allergy') %></a>
     </li>
   </ul>
+<<<<<<< HEAD
 
 <div class="modal fade" id="FoodModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -32,6 +33,19 @@
       <div class="toggle-container">
         <%= simple_form_for :restaurant_index, url: restaurants_path, method: :get do |f| %>
         <input name="utf8" type="hidden" value="&#x2713;" />
+=======
+  <div class="modal fade" id="FoodModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><%= t('.choose') %></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="toggle-container">
+>>>>>>> 251cf34e8d6444cf38854b84260b8103a1546884
         <fieldset class="form-group check_boxes required restaurants_food_styles">
             <input type="hidden" value="" />
                 <% restaurants = Restaurant.where(food_style: :french) %>
@@ -87,3 +101,26 @@
   >
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
