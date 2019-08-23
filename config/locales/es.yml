@@ -1,8 +1,17 @@
 es:
   tags:
     index:
-        do: "Usted tiene"
-        allergi: "alergias ?"
+        allergi: "Usted tiene alergias ?"
         food: "Preferencias culinarias ?"
         valid: "Validar !"
         skip: "Omitir"
+  restaurants:
+    index:
+        food: "Estilo de comida"
+        dist: "Distancia"
+        allergi: "Alergia"
+    show:
+        descr: "Descripcion :"
+        start: "Entées"
+        main: "Plats"
+        dess: "Desserts"

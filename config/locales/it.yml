@@ -1,0 +1,7 @@
+it:
+  tags:
+    index:
+        allergi: "Hai qualche allergia ?"
+        food: "Preferenze alimentari?"
+        valid: "Convalida!"
+        skip: "Salta"

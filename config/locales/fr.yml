@@ -1,8 +1,18 @@
 fr:
   tags:
     index:
-        do: "Avez-vous des"
-        allergi: "allergies ?"
+        allergi: "Avez-vous des allergies ?"
         food: "Préférences culinaires ?"
         valid: "Valider !"
         skip: "Passer"
+  restaurants:
+    index:
+        food: "Style culinaire"
+        dist: "Distance"
+        allergi: "Allergie"
+    show:
+        descr: "Description :"
+        start: "Entées"
+        main: "Plats"
+        dess: "Desserts"
+

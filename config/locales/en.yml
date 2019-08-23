@@ -1,8 +1,17 @@
 en:
   tags:
     index:
-        do: "Do you have any"
-        allergi: "allergies ?"
+        allergi: "Do you have any allergies ?"
         food: "Food preferences ?"
         valid: "Validate !"
         skip: "Skip this part"
+  restaurants:
+    index:
+        food: "Food Style"
+        dist: "Distance"
+        allergi: "Allergy"
+    show:
+        descr: "Description :"
+        start: "Starters"
+        main: "Main-Courses"
+        dess: "Desserts"
