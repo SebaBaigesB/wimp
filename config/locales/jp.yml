@@ -5,3 +5,14 @@ jp:
         food: "食べ物の好み？"
         valid: "検証 ！"
         skip: "スキップ"
+  restaurants:
+    index:
+        food: "フードスタイル"
+        dist: "距離"
+        allergy: "アレルギー"
+        choose: "食べたい食べ物のスタイルを選択してください"
+    show:
+        descr: "説明 :"
+        start: "スターター"
+        main: "メインディッシュ"
+        dess: "デザート"
