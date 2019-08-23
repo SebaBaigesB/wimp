@@ -5,7 +5,8 @@ user = User.create(email: 'coco@example.com', password: 'azerty')
 puts "Creating restaurants"
 10.times do
   name = Faker::Restaurant.name
-  type = "japanese"
+  food_style_random = rand(6)
+  type = Restaurant.food_styles.keys[food_style_random]
   address = "Bordeaux"
   r = Restaurant.new(user: user, name: name, food_style: type, address: address)
   r.save
@@ -42,4 +43,3 @@ Tag.create!(title: "Vegan", status: 1)
 Tag.create!(title: "Vegetarian", status: 1)
 Tag.create!(title: "Organic", status: 1)
 Tag.create!(title: "Homemade", status: 1)
-
