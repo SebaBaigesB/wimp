@@ -8,16 +8,72 @@
 
   <ul class="list-inline tabs-underlined">
     <li>
-      <a href="#" class="tab-underlined">Food Style</a>
+      <a type="button" data-toggle="modal" data-target="#FoodModal" class="tab-underlined" id="food"><%= t('.food') %></a>
     </li>
     <li>
-      <a href="#" class="tab-underlined">Distance</a>
+      <a href="#" class="tab-underlined"><%= t('.dist') %></a>
     </li>
     <li>
-      <a href="tags" class="tab-underlined">Allergy</a>
+      <a href="tags" class="tab-underlined"><%= t('.allergy') %></a>
     </li>
   </ul>
 
+<div class="modal fade" id="FoodModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Choose the food style you would like the eat</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <!--  <div class="toggle-container">
+          <input id="toggle1" type="checkbox">
+          <label for="toggle1">French</label>
+
+          <input id="toggle2" type="checkbox">
+          <label for="toggle2">Italian</label>
+
+          <input id="toggle3" type="checkbox">
+          <label for="toggle3">Japanese</label>
+
+          <input id="toggle4" type="checkbox">
+          <label for="toggle4">Chinese</label>
+
+          <input id="toggle5" type="checkbox">
+          <label for="toggle5">Tapas</label>
+
+          <input id="toggle6" type="checkbox">
+          <label for="toggle6">Others</label>
+        </div>
+      </div> -->
+
+      <div class="toggle-container">
+        <%= simple_form_for :restaurant_index, url: restaurants_path, method: :get do |f| %>
+        <input name="utf8" type="hidden" value="&#x2713;" />
+        <fieldset class="form-group check_boxes required restaurants_food_styles">
+            <input type="hidden" value="" />
+                <% restaurants = Restaurant.where(food_style: :french) %>
+                <% restaurants.food_styles.keys.each do |food_style| %>
+                  <div class="form-check form-check-inline box-size">
+                      <input class="form-check-input check_boxes required" type="checkbox" value="<%= food_style %>" name="restaurants_index[restaurants][]" id="restaurants_index_restaurants_<%= food_style %>" />
+                      <label class="collection_check_boxes" for="restaurants_index_restaurants_<%= food_style %>">
+                          <%= food_style %></label>
+                  </div>
+                <% end %>
+        </fieldset>
+      </div>
+      <div class="modal-footer">
+       <!--  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button> -->
+        <div class="subutton justify-content-end"><%= f.button :submit, 'valid' %></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
   <% @restaurants.each do |restaurant| %>
     <div class="rows d-flex">
