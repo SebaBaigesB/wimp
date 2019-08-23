@@ -4,4 +4,5 @@ class Meal < ApplicationRecord
   has_many :tags, through: :meal_tags
 
   enum course: { entrée: 0, plat: 1, dessert: 2 }
+  # translates :name, :description
 end
