@@ -1,5 +1,7 @@
 class Owner::MealsController < ApplicationController
+  before_action :set_meal, only: [:show, :edit, :update, :destroy]
   def index
+    @meals = Meal.all
   end
 
   def show
@@ -14,7 +16,7 @@ class Owner::MealsController < ApplicationController
     @meal = Meal.new(meal_params)
     @meal.user = current_user
     if @meal.save
-      redirect_to meal_path(@meal)
+      redirect_to owner_meals_path
     else
       render :new
     end
@@ -24,16 +26,25 @@ class Owner::MealsController < ApplicationController
   end
 
   def update
+    if @meal.update(meal_params)
+      redirect_to @owner_meal, notice: 'Your meal was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   def destroy
     @current_user = Meal.where(user: current_user)
     @meal = Meal.find(params[:id])
     @meal.destroy
-    redirect_to meals_path
+    redirect_to owner_meals_path
   end
 
   private
+
+  def set_meal
+    @meal = Meal.find(params[:id])
+  end
 
   def meal_params
     params.require(:meal).permit(:name, :description, :photo, :prix, :tags)
