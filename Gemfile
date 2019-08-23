@@ -20,6 +20,10 @@ gem 'devise'
 gem 'geocoder'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+
+
+gem "google-cloud-translate"
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
