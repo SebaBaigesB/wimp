@@ -9,7 +9,7 @@ fr:
     index:
         food: "Style culinaire"
         dist: "Distance"
-        allergi: "Allergie"
+        allergy: "Allergie"
     show:
         descr: "Description :"
         start: "Entées"
