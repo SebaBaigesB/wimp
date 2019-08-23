@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2019_08_21_143538) do
     t.string "description"
     t.float "longitude"
     t.float "latitude"
-    t.string "food_style"
+    t.integer "food_style"
     t.string "menu_language"
     t.string "photos"
     t.bigint "user_id"
@@ -51,13 +51,21 @@ ActiveRecord::Schema.define(version: 2019_08_21_143538) do
     t.index ["user_id"], name: "index_restaurants_on_user_id"
   end
 
-  create_table "tags", force: :cascade do |t|
-    t.string "title"
-    t.string "icon"
-    t.string "category"
+  create_table "tag_translations", force: :cascade do |t|
+    t.bigint "tag_id", null: false
+    t.string "locale", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
+    t.index ["locale"], name: "index_tag_translations_on_locale"
+    t.index ["tag_id"], name: "index_tag_translations_on_tag_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "icon"
     t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

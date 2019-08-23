@@ -28,26 +28,6 @@
         </button>
       </div>
       <div class="modal-body">
-       <!--  <div class="toggle-container">
-          <input id="toggle1" type="checkbox">
-          <label for="toggle1">French</label>
-
-          <input id="toggle2" type="checkbox">
-          <label for="toggle2">Italian</label>
-
-          <input id="toggle3" type="checkbox">
-          <label for="toggle3">Japanese</label>
-
-          <input id="toggle4" type="checkbox">
-          <label for="toggle4">Chinese</label>
-
-          <input id="toggle5" type="checkbox">
-          <label for="toggle5">Tapas</label>
-
-          <input id="toggle6" type="checkbox">
-          <label for="toggle6">Others</label>
-        </div>
-      </div> -->
 
       <div class="toggle-container">
         <%= simple_form_for :restaurant_index, url: restaurants_path, method: :get do |f| %>
@@ -57,8 +37,8 @@
                 <% restaurants = Restaurant.where(food_style: :french) %>
                 <% restaurants.food_styles.keys.each do |food_style| %>
                   <div class="form-check form-check-inline box-size">
-                      <input class="form-check-input check_boxes required" type="checkbox" value="<%= food_style %>" name="restaurants_index[restaurants][]" id="restaurants_index_restaurants_<%= food_style %>" />
-                      <label class="collection_check_boxes" for="restaurants_index_restaurants_<%= food_style %>">
+                      <input class="imput2 form-check-input check_boxes required" type="checkbox" value="<%= food_style %>" name="restaurants_index[restaurants][]" id="restaurants_index_restaurants_<%= food_style %>" />
+                      <label class="label2 collection_check_boxes" for="restaurants_index_restaurants_<%= food_style %>">
                           <%= food_style %></label>
                   </div>
                 <% end %>
