@@ -1,110 +1,81 @@
-
-
 <div class="restaurant">
-
-  <div class="stick-me awsome col-2" id="map-button">
-    <i class="fas fa-arrow-alt-circle-left "></i>
-    <p>Map</p>
-  </div>
-
-  <ul class="list-inline tabs-underlined">
-    <li>
-      <a type="button" data-toggle="modal" data-target="#FoodModal" class="tab-underlined" id="food"><%= t('.food') %></a>
-    </li>
-    <li>
-      <a href="#" class="tab-underlined"><%= t('.dist') %></a>
-    </li>
-    <li>
-      <a href="tags" class="tab-underlined"><%= t('.allergy') %></a>
-    </li>
-  </ul>
-  <div class="modal fade" id="FoodModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><%= t('.choose') %></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="toggle-container">
-        <fieldset class="form-group check_boxes required restaurants_food_styles">
-            <%= simple_form_for :restaurant_index, url: restaurants_path, method: :get do |f| %>
-            <input name="utf8" type="hidden" value="&#x2713;" />
-                <input type="hidden" value="" />
-                    <% restaurants = Restaurant.where(food_style: :french) %>
-                    <% restaurants.food_styles.keys.each do |food_style| %>
-                      <div class="form-check form-check-inline box-size">
-                          <input class="form-check-input check_boxes required" type="checkbox" value="<%= food_style %>" name="restaurants_index[restaurants][]" id="restaurants_index_restaurants_<%= food_style %>" />
-                          <label class="collection_check_boxes" for="restaurants_index_restaurants_<%= food_style %>">
-                              <%= food_style %></label>
-                      </div>
-                    <% end %>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <%= f.button :submit %>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-secondary">Submit</button>
-        </div>
-          </fieldset>
-          <% end %>
-      </div>
-    </div>
-  </div>
+ <div class= "stick-me awsome col-2" id="map-button">
+   <i class="fas fa-arrow-alt-circle-left "></i>
+   <p>Map</p>
+ </div>
+ <ul class="list-inline tabs-underlined">
+   <li>
+     <a type="button" data-toggle="modal" data-target="#FoodModal" class="tab-underlined" id="food"><%= t('.food') %></a>
+   </li>
+   <li>
+     <a href="#" class="tab-underlined"><%= t('.dist') %></a>
+   </li>
+   <li>
+     <a href="tags" class="tab-underlined"><%= t('.allergy') %></a>
+   </li>
+ </ul>
+ <div class="modal fade" id="FoodModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel"><%= t('.choose') %></h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="toggle-container">
+       <fieldset class="form-group check_boxes required restaurants_food_styles">
+           <%= simple_form_for :restaurant_index, url: restaurants_path, method: :get do |f| %>
+           <input name="utf8" type="hidden" value="&#x2713;" />
+               <input type="hidden" value="" />
+                   <% restaurants = Restaurant.where(food_style: :french) %>
+                   <% restaurants.food_styles.keys.each do |food_style| %>
+                     <div class="form-check form-check-inline box-size">
+                         <input class="form-check-input check_boxes required" type="checkbox" value="<%= food_style %>" name="restaurants_index[restaurants][]" id="restaurants_index_restaurants_<%= food_style %>" />
+                         <label class="collection_check_boxes" for="restaurants_index_restaurants_<%= food_style %>">
+                             <%= food_style %></label>
+                     </div>
+                   <% end %>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <%= f.button :submit %>
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         <button type="submit" class="btn btn-secondary">Submit</button>
+       </div>
+         </fieldset>
+         <% end %>
+     </div>
+   </div>
+ </div>
 </div>
-
-  <% @restaurants.each do |restaurant| %>
-    <div class="rows d-flex">
-      <div class="col-sm card-trip">
-        <img src="https://images.unsplash.com/photo-1517142099008-c2eb9227b575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1985&q=80"/>
-        <div class="card-trip-infos">
-          <div>
-            <div class="name text-center">
-              <%= link_to restaurant.name, restaurant_path(restaurant) %>
-            </div>
-            <div class="style text-center">
-              <%= restaurant.food_style %>
-            </div>
-            <div class="address">
-              <%= restaurant.address %>
-            </div>
-          </div>
-          <h2 class="card-trip-pricing">150m</h2>
-        </div>
-      </div>
-    </div>
-  <% end %>
-
-  <div
-    id="map"
-    style="width: 100%; height: 1000px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  >
-  </div>
+ <% @restaurants.each do |restaurant| %>
+   <div class="rows d-flex">
+     <div class="col-sm card-trip">
+       <img src="https://images.unsplash.com/photo-1526234362653-3b75a0c07438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80" />
+       <div class="card-trip-infos">
+         <div>
+           <div class="name">
+             <%= link_to restaurant.name, restaurant_path(restaurant) %>
+           </div>
+           <div class="style text-center">
+             <%= restaurant.food_style %>
+           </div>
+           <div class="address">
+             <%= restaurant.address %>
+           </div>
+         </div>
+         <h2 class="card-trip-pricing">150m</h2>
+       </div>
+     </div>
+   </div>
+ <% end %>
+ <div
+   id="map"
+   style="width: 100%; height: 1000px;"
+   data-markers="<%= @markers.to_json %>"
+   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+ >
+ </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
