@@ -22,12 +22,12 @@
   transform: translate(-50%, -50%); // Modifie la position des boxs
 }
 
-.input2 {
+.restaurant input {
   position: absolute;
   left: -9999px;
 }
 
-.label2 {
+.restaurant label {
   display: block;
   position: relative;
   margin: 12px;
@@ -43,7 +43,7 @@
   // transition: background-color .2s, box-shadow .2s;
 }
 
-.label2::before {
+.restaurant label::before {
   content: '';
   display: block;
   position: absolute;
@@ -56,24 +56,8 @@
   transition: background-color .2s;
 }
 
-// label:first-of-type {
-//   transform: translateX(-40px);
-// }
 
-// label:last-of-type {
-//   transform: translateX(40px);
-// }
-
-// label:hover, input:focus + label {
-//   box-shadow: 0 0 20px rgba(0, 0, 0, .6);
-// }
-
-// input:checked + label {
-//   background-color: #57ab6c;
-// }
-
-
-input:checked + label::before {
+.restaurant input:checked + label::before {
   background-color: #fff;
 }
 
