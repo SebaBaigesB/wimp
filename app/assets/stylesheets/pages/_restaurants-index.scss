@@ -13,15 +13,13 @@
 
 .awsome {
   background-color: white;
-  border: 1px solid;
   border-radius: 25px 0 0 25px;
-  font-size: 24px;
+  font-size: 14px;
   text-align: right;
-
 }
 
 .awsome p {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #map {
@@ -31,4 +29,9 @@
   display: none;
   transition:.2s;
 }
+
+.tab-underlined {
+  font-size: 20px;
+}
+
 
