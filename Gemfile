@@ -18,6 +18,8 @@ gem 'cloudinary', '~> 1.9.1'
 gem 'globalize'
 gem 'devise'
 gem 'geocoder'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 group :development do
   gem 'web-console', '>= 3.3.0'
 end

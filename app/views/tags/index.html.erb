@@ -5,7 +5,7 @@
         <input type="hidden" name="tags_session[tags][]" value="" />
         <div class="funky">
             <div class="funky-warning">
-              <h2 class="text-center"><%= t('.do') %> <br><%= t('.allergi') %> </h2>
+              <h2 class="text-center"><%= t('.allergi') %> </h2>
               <% tags = Tag.where(status: :allergy) %>
                 <% tags.each_with_index do |tag| %>
                 <div class="form-check form-check-inline box-size">
@@ -27,7 +27,7 @@
         </div>
 
 </fieldset>
-  <div class="subutton justify-content-end"><%= f.button :submit, t('.valid') %></div>
+  <div class="btn btn-secondary justify-content-end"><%= f.button :submit, t('.valid') %></div>
 <% end %>
 </div>
 <div class="container" id="skip">
