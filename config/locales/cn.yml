@@ -2,7 +2,18 @@ cn:
   tags:
     index:
         allergi: "你对什么过敏吗 ？"
-        food: "食物偏好？"
+        food: "饮食？"
         valid: "验证！"
         skip: "跳过这部分"
+  restaurants:
+    index:
+        food: "食物风格"
+        dist: "距离"
+        allergy: "过敏"
+        choose: "选择您想吃的食物风格"
+    show:
+        descr: "描述 :"
+        start: "首发"
+        main: "主修课"
+        dess: "甜品"
 

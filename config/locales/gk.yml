@@ -2,6 +2,17 @@ gk:
   tags:
     index:
         allergi: "Εχεις καμια αλλεργια ?"
-        food: "Προτιμήσεις τροφίμων ?"
+        food: "Δίαιτες ?"
         valid: "Επικυρώστε!"
         skip: "Παραλείπω"
+  restaurants:
+    index:
+        food: "Τρόφιμο"
+        dist: "Distance"
+        allergy: "Απόσταση"
+        choose: "Επιλέξτε το στυλ τροφής που θέλετε να φάτε"
+    show:
+        descr: "Περιγραφή :"
+        start: "Εκκινητές"
+        main: "Κύρια μαθήματα"
+        dess: "Επιδόρπια"

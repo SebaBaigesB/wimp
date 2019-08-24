@@ -1,7 +1,0 @@
-sw:
-  tags:
-    index:
-        allergi: "Har du några allergier ?"
-        food: "Matpreferenser ?"
-        valid: "Validera !"
-        skip: "Hoppa"

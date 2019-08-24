@@ -1,55 +1,65 @@
-<div class="background-container">
-  <div class="container ">
-      <% if current_user %>
+<div class="background">
+    <div class="">
+        <% if current_user %>
         <%= link_to "Chef", owners_restaurant_path(@restaurant, current_user), class: "nav-link btn-chief" %>
-      <% else %>
+        <% else %>
         <%= link_to "Chef", new_user_session_path, class: "nav-link btn-chief" %>
-      <% end %>
-  <br>
-    <div class="flags">
-      <div class="row w-120">
-        <div class="col-3">
-         <a href="/tags"class="country_flags"><%= image_tag "united-kingdom.png", alt: "united-kingdom", width: 50%></a>
+        <% end %>
+        <br>
+        <div class="flags px-3">
+            <div class="row">
+                <div class="col-3 p-3">
+                    <a href="/tags" class="country_flags">
+                        <%= image_tag "united-kingdom.png", alt: "united-kingdom", width: 55%></a>
+                </div>
+                <div class="col-3 p-3">
+                    <a href="/fr/tags" class="country_flags">
+                        <%= image_tag "france.png", alt: "france", width: 55 %></a>
+                </div>
+                <div class="col-3 p-3">
+                    <a href="/de/tags" class="country_flags">
+                        <%= image_tag "germany.png", alt: "germany", width: 55 %></a>
+                </div>
+                <div class="col-3 p-3">
+                    <a href="/it/tags" class="country_flags">
+                        <%= image_tag "italy.png", alt: "italy", width: 55 %></a>
+                </div><br>
+                <div class="col-3 p-3">
+                    <a href="/jp/tags" class="country_flags">
+                        <%= image_tag "japan.png", alt: "japan", width: 55 %></a> <br>
+                </div>
+                <div class="col-3 p-3">
+                    <a href="/pt/tags" class="country_flags">
+                        <%= image_tag "portugal.png", alt: "portugal", width: 55 %></a>
+                </div>
+                <div class="col-3 p-3">
+                    <a href="/ko/tags" class="country_flags">
+                        <%= image_tag "south-korea.png", alt: "south-korea", width: 55 %></a>
+                </div>
+                <div class="col-3 p-3">
+                    <a href="/es/tags" class="country_flags">
+                        <%= image_tag "spain.png", alt: "spain", width: 55 %></a>
+                </div>
+                <div class="col-3 p-3">
+                    <a href="/cn/tags" class="country_flags">
+                        <%= image_tag "china.png", alt: "china", width: 55 %></a>
+                </div>
+                <div class="col-3 p-3">
+                    <a href="/gk/tags" class="country_flags">
+                        <%= image_tag "greece.png", alt: "greece", width: 55 %></a>
+                </div>
+                <div class="col-3 p-3">
+                    <a href="/th/tags" class="country_flags">
+                        <%= image_tag "thailand.png", alt: "thailand", width: 55 %></a>
+                </div>
+                <div class="col-3 p-3">
+                    <a href="/ru/tags" class="country_flags">
+                        <%= image_tag "Russie.png", alt: "russie", width: 55 %></a>
+                </div>
+            </div>
         </div>
-        <div class="col-3">
-          <a href="/fr/tags"class="country_flags"><%= image_tag "france.png", alt: "france", width: 50 %></a>
+        <div class="def-wimp">
+            <p>* See all restaurants informations in your language *</p>
         </div>
-        <div class="col-3">
-          <a href="/de/tags"class="country_flags"><%= image_tag "germany.png", alt: "germany", width: 50 %></a>
-        </div>
-        <div class="col-3">
-          <a href="/it/tags"class="country_flags"><%= image_tag "italy.png", alt: "italy", width: 50 %></a>
-        </div><br>
-        <div class="col-3">
-          <a href="/jp/tags"class="country_flags"><%= image_tag "japan.png", alt: "japan", width: 50 %></a> <br>
-        </div>
-        <div class="col-3">
-          <a href="/pt/tags"class="country_flags"><%= image_tag "portugal.png", alt: "portugal", width: 50 %></a>
-        </div>
-        <div class="col-3">
-          <a href="/ko/tags"class="country_flags"><%= image_tag "south-korea.png", alt: "south-korea", width: 50 %></a>
-        </div>
-        <div class="col-3">
-          <a href="/es/tags"class="country_flags"><%= image_tag "spain.png", alt: "spain", width: 50 %></a>
-        </div>
-        <div class="col-3">
-          <a href="/cn/tags"class="country_flags"><%= image_tag "china.png", alt: "china", width: 50 %></a>
-        </div>
-        <div class="col-3">
-          <a href="/gk/tags"class="country_flags"><%= image_tag "greece.png", alt: "greece", width: 50 %></a>
-        </div>
-        <div class="col-3">
-          <a href="/th/tags"class="country_flags"><%= image_tag "thailand.png", alt: "thailand", width: 50 %></a>
-        </div>
-        <div class="col-3">
-          <a href="/sw/tags"class="country_flags"><%= image_tag "sweden.png", alt: "sweden", width: 50 %></a>
-        </div>
-      </div>
     </div>
-
-    <div class="def-wimp">
-      <p>* See all restaurants informations in your language *</p>
-    </div>
-
-  </div>
 </div>

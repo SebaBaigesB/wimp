@@ -2,7 +2,7 @@ jp:
   tags:
     index:
         allergi: "あなたはアレルギーを持っていますか ？"
-        food: "食べ物の好み？"
+        food: "ダイエット？"
         valid: "検証 ！"
         skip: "スキップ"
   restaurants:
