@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :restaurant
+  has_many :reviews, through: :restaurants
 end
