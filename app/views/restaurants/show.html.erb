@@ -12,7 +12,7 @@
             <h3>
                 <%= t('.descr') %>
             </h3>
-            <p> Dans une ambiance chaleureuse et décontractée plonger dans un décor au cadre idyllique unique et convivial.
+            <p> Dans une ambiance chaleureuse et décontractée plongez dans un décor au cadre idyllique unique et convivial.
                 Venez découvrir la cuisine du moment, raffinée, gastronomique moderne mais aussi traditionnelle.
                 <%= @restaurant.description %>
             </p>
@@ -112,6 +112,10 @@
                         <h1>
                             <%= t('.dess') %> +</h1>
                     </a>
+                    <%= link_to "Create your review", new_restaurant_review_path(@restaurant.id), class: "btn btn-warning" %>
+                    <% @restaurant.reviews.each do |review| %>
+                    <%= review.content %>
+                    <% end %>
                     <div class="collapse" id="collapseExample3">
                         <div class="cards ">
                             <% @meals.each do |meal| %>
