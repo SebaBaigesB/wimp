@@ -3,20 +3,25 @@
   align-items: center;
   font-family: parisienne;
   font-size: 16px;
+  border: 1px solid #e4d7b9;
+  color: #ccb379;
+  font-size: 24px;
 
 }
 
 .tabs-underlined .tab-underlined {
   color: black;
   padding: 8px;
-  margin: 8px 16px;
-  opacity: .4;
+  margin: 0px 2px;
+  // opacity: .8;
   cursor: pointer;
   text-decoration: none;
   border-bottom: 4px solid transparent;
+  color: #ccb379;
+  font-size: 24px;
 }
 
 .tabs-underlined .tab-underlined :hover {
   opacity: 1;
-  border-bottom: 3px solid #555555;
+  // border-bottom: 3px solid #555555;
 }

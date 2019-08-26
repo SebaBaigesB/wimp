@@ -1,17 +1,13 @@
 .toggle-container {
   position: relative;
   width: 250px;
-  left: 25%;
-
+  left: 20%;
 }
 
 
 .restaurant input {
   position: absolute;
   left: -9999px;
-
-  clear: both;
-  overflow: hidden;
 }
 
 .restaurant label {
@@ -21,7 +17,7 @@
   padding: 11px 23px 8px 57px;
   border-radius: 100px;
   color: #0e0000;
-  background-color: #e6af2e99;
+  background-color: #ccb379;
   box-shadow: 0 0 2px rgba(0, 0, 0, .2);
 }
 
@@ -39,10 +35,8 @@
 
 }
 
-
 .restaurant input:checked + label::before {
   background-color: black;
-
 }
 
 //  #rest {
