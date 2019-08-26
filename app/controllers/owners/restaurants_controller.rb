@@ -1,10 +1,4 @@
 class Owners::RestaurantsController < ApplicationController
-  def index
-  end
-
-  def show
-    @restaurants = Restaurant.where(user: current_user)
-  end
 
   def new
     @current_user = Restaurant.where(user: current_user)
@@ -12,6 +6,8 @@ class Owners::RestaurantsController < ApplicationController
   end
 
   def create
+    @current_user = Restaurant.where(user: current_user)
+    @restaurant = Restaurant.new
   end
 
   def edit

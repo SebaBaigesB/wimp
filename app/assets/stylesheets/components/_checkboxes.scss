@@ -1,6 +1,6 @@
 h2 {
-color: #f0ad4e;
-margin-top: 50px;
+font-family: Parisienne;
+margin-top: 30px;
 }
 
 .funky div {
@@ -9,11 +9,16 @@ margin-top: 50px;
 }
 
 .funky label {
-  width: 100%;
-  border-radius: 3px;
-  border: 1px solid #D1D3D4;
-  font-weight: normal;
-  font-size: 16px;
+  display: block;
+  position: relative;
+  width: 84%;
+  font-size: 14px;
+  margin: 8px;
+  padding: 10px 20px 6px 47px;
+  border-radius: 100px;
+  color: #0e0000;
+  background-color: #e6af2e99;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .2);
 }
 
 .box-size {
@@ -24,56 +29,70 @@ margin-top: 50px;
   display: none;
 }
 
-.funky input[type="checkbox"]:empty ~ label {
-  position: relative;
-  line-height: 2em;
-  text-indent: 2.85em;
-  margin-top: 2em;
-  cursor: pointer;
-    -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.funky input[type="checkbox"]:empty ~ label:before {
-  position: absolute;
+.funky label::before {
+ content: '';
   display: block;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  content: '';
-  width: 2.5em;
-  background: #D1D3D4;
-  border-radius: 3px 0 0 3px;
+  position: absolute;
+  top: 6px;
+    bottom: 8px;
+    left: 11px;
+    width: 23px;
+    border: 2px solid black;
+  border-radius: 100px;
 }
 
-.funky input[type="checkbox"]:hover:not(:checked) ~ label {
-  color: #888;
+.funky input:checked + label::before {
+  background-color: black;
+
 }
 
-.funky input[type="checkbox"]:hover:not(:checked) ~ label:before {
-  content: '\2714';
-  text-indent: .9em;
-  color: #C2C2C2;
-}
+// .funky input[type="checkbox"]:empty ~ label {
+//   position: relative;
+//   cursor: pointer;
+//     -webkit-user-select: none;
+//      -moz-user-select: none;
+//       -ms-user-select: none;
+//           user-select: none;
+// }
 
-.funky input[type="checkbox"]:checked ~ label {
-  color: #777;
-}
+// .funky input[type="checkbox"]:empty ~ label:before {
+//   position: absolute;
+//   display: block;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   content: '';
+//   width: 2.5em;
+//   background: #edc96c;
+//   border-radius: 20px 0 0 20px;;
+// }
 
-.funky input[type="checkbox"]:checked ~ label:before {
-  content: '\2714';
-  text-indent: .9em;
-  color: #333;
-  background-color: #ccc;
-}
+// .funky input[type="checkbox"]:hover:not(:checked) ~ label {
+//   color: #888;
+// }
 
-.funky input[type="checkbox"]:focus ~ label:before {
-  box-shadow: 0 0 0 3px #999;
-}
+// .funky input[type="checkbox"]:hover:not(:checked) ~ label:before {
+//   content: '\2714';
+//   text-indent: .9em;
+//   color: #C2C2C2;
+// }
 
-.funky-warning input[type="checkbox"]:checked ~ label:before {
-  color: #fff;
-  background-color: #f0ad4e;
-}
+// .funky input[type="checkbox"]:checked ~ label {
+//   // color: #777;
+// }
+
+// .funky input[type="checkbox"]:checked ~ label:before {
+//   content: '\2714';
+//   text-indent: .9em;
+//   color: #333;
+//   background-color: #ccc;
+// }
+
+// .funky input[type="checkbox"]:focus ~ label:before {
+//   box-shadow: 0 0 0 3px #999;
+// }
+
+// .funky-warning input[type="checkbox"]:checked ~ label:before {
+//   color: #fff;
+//   background-color: #f0ad4e;
+// }
