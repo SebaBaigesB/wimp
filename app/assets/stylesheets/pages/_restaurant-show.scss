@@ -1,11 +1,12 @@
 .description h3 {
+  padding-top: 10px;
   text-align: center;
-  font-size: 20px;
+  font-size: 24px;
   font-family: Parisienne;
 }
 
 .description p {
-  font-size: 12px;
+  font-size: 14px;
   text-align: justify;
   font-family: Playfair Display;
 }
@@ -19,4 +20,23 @@
 
 .h5{
   text-align: center;
+}
+
+
+
+.modal-title {
+  font-size: 24px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-family: Parisienne;
+
+}
+
+.modal-body img {
+  width: 326px;
+  margin-left: auto;
+  border-radius: 8px;
+  box-shadow:  5px 5px;
+
 }

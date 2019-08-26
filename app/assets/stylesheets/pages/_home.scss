@@ -1,28 +1,28 @@
 
 // Specific CSS for your home-page
-.background-container {
-  background-image: image-url('back.jpg');
+.background{
+  background-image: image-url('back2.png');
   background-repeat: no-repeat;
   background-size: 375px;
 }
 
-.container{
- width: 300px
-}
 
 .flags {
-  padding-top: 280px;
-  opacity: 0.6;
+  padding-top: 260px;
+  opacity: 0.8;
+  display: block;
+
 }
 
 .col-3 {
-  padding: 10px;
+  padding: 20px;
 }
 
 
 .def-wimp {
   font-family: Parisienne;
-  font-size: 14px;
+  font-size: 19px;
   position:fixed;
   bottom:0;
+  margin-bottom: 15px;
 }

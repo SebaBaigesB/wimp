@@ -1,7 +1,0 @@
-sk:
-  tags:
-    index:
-        allergi: "알레르기가 있나요 ?"
-        food: "음식 선호도?"
-        valid: "확인!"
-        skip: "이 부분을 건너 뛰십시오"

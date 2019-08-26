@@ -5,13 +5,13 @@
 }
 
 .card-trip > img {
-  height: 100px;
+  height: 140px;
   width: 100%;
   object-fit: cover;
+  opacity: 0.8;
 }
 
 .card-trip h2 {
-
   font-size: 16px;
   font-weight: bold;
   margin: 0;
@@ -39,11 +39,12 @@
 
 .card-trip .style {
   font-family: Parisienne;
+  font-size: 18px;
 }
 
 .card-trip .address {
   font-family: Playfair Display;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .card-trip-infos .card-trip-user {
@@ -52,3 +53,4 @@
   top: -20px;
   width: 40px;
 }
+

@@ -2,6 +2,17 @@ pt:
   tags:
     index:
         allergi: "Você tem alguma alergia ?"
-        food: "Preferências alimentares?"
+        food: "Dieta ?"
         valid: "Valide!"
         skip: "Pule esta parte"
+  restaurants:
+    index:
+        food: "Estilo Alimentar"
+        dist: "Distância"
+        allergy: "Alergia"
+        choose: "Escolha o estilo de comida que você gostaria de comer"
+    show:
+        descr: "Descrição :"
+        start: "Aperitivos"
+        main: "Cursos principais"
+        dess: "Sobremesas"

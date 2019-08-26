@@ -5,15 +5,26 @@ user = User.create(email: 'seb@example.com', password: 'azerty', role: 'user')
 
 
 puts "Creating restaurants"
-10.times do
   name = Faker::Restaurant.name
   food_style_random = rand(6)
   type = Restaurant.food_styles.keys[food_style_random]
-  address = "Bordeaux"
+  address = "107 cours balguerie stuttenberg 33300 bordeaux France"
   r = Restaurant.new(user: user, name: name, food_style: type, address: address)
   r.save
   # desc = Faker::Restaurant.description
-end
+
+puts "Creating user"
+user = User.create(email: 'xavier@example.com', password: 'azerty')
+
+puts "Creating restaurants"
+  name = Faker::Restaurant.name
+  food_style_random = rand(6)
+  type = Restaurant.food_styles.keys[food_style_random]
+  address = "90 Cours du Médoc 33300 Bordeaux  France"
+  r = Restaurant.new(user: user, name: name, food_style: type, address: address)
+  r.save
+  # desc = Faker::Restaurant.description
+
 puts "Creating meals"
 5.times do
   starter = Faker::Food.dish
@@ -45,3 +56,5 @@ Tag.create!(title: "Vegan", status: 1)
 Tag.create!(title: "Vegetarian", status: 1)
 Tag.create!(title: "Organic", status: 1)
 Tag.create!(title: "Homemade", status: 1)
+Tag.create!(title: "Halal", status: 1)
+Tag.create!(title: "Casher", status: 1)

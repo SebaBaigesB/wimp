@@ -2,6 +2,18 @@ de:
   tags:
     index:
         allergi: "Hast du irgendwelche Allergien ?"
-        food: "Essensvorlieben?"
+        food: "Diäten?"
         valid: "Bestätigen Sie!"
         skip: "Überspringen"
+  restaurants:
+    index:
+        food: "Essensstil"
+        dist: "Entfernung"
+        allergy: "Allergie"
+        choose: "Wählen Sie die Art des Essens, die Sie essen möchten"
+    show:
+        descr: "Beschreibung :"
+        start: "Vorspeisen"
+        main: "Hauptgänge"
+        dess: "Nachspeisen"
+
