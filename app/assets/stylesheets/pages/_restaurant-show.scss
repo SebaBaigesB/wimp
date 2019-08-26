@@ -1,7 +1,7 @@
 .description h3 {
   padding-top: 10px;
   text-align: center;
-  font-size: 32px;
+  font-size: 24px;
   font-family: Parisienne;
 }
 
@@ -44,4 +44,12 @@
   width: 326px;
   margin-left: auto;
   border-radius: 8px;
+}
+
+#map {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  display: none;
+  transition:.2s;
 }
