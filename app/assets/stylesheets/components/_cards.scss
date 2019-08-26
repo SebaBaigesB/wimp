@@ -20,25 +20,28 @@
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 90px;
-  width: 130px;
+  height: 120px;
+  width: 170px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 .card-category h3 {
-  font-size: 16px;
+  font-size: 22px;
   text-align: center;
+  filter: contrast(1.75);
 }
 
 .card-category a {
   text-decoration: none;
   color: white;
+  display: flex;
+  position: center;
 }
+

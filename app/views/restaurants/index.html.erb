@@ -4,18 +4,12 @@
         <p>Map</p>
     </div>
     <ul class="list-inline tabs-underlined">
-        <li>
-            <a type="button" data-toggle="modal" data-target="#FoodModal" class="tab-underlined" id="food">
-                <%= t('.food') %></a>
+        <li><a type="button" data-toggle="modal" data-target="#FoodModal" class="tab-underlined" id="food"><%= t('.food') %></a>
         </li>
-        <li>
-            <a href="/" class="tab-underlined">
-                <%= t('.dist') %></a>
+        <li><a href="#" class="tab-underlined"><%= t('.dist') %></a>
         </li>
-        <li>
-            <a href="tags" class="tab-underlined">
-                <%= t('.allergy') %></a>
-        </li>
+        <li><a href="tags" class="tab-underlined">
+                <%= t('.allergy') %></a></li>
     </ul>
     <div class="modal fade" id="FoodModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -37,7 +31,7 @@
                             <% restaurants = Restaurant.where(food_style: :french) %>
                             <% restaurants.food_styles.keys.each do |food_style| %>
                             <div class="form-check form-check-inline box-size">
-                                <input class="form-check-input check_boxes required" type="checkbox" value="<%= food_style %>" name="restaurants_index[restaurants][]" id="restaurants_index_restaurants_<%= food_style %>" />
+                                <input type="checkbox" value="<%= food_style %>" name="restaurants_index[restaurants][]" id="restaurants_index_restaurants_<%= food_style %>" />
                                 <label class="collection_check_boxes" for="restaurants_index_restaurants_<%= food_style %>">
                                     <%= food_style %></label>
                             </div>
@@ -46,8 +40,8 @@
                 </div>
                 <div class="modal-footer">
                     <%= f.button :submit %>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-secondary">Submit</button>
+                    <button type="button" class="btn button2" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn button2">Submit</button>
                 </div>
                 </fieldset>
                 <% end %>
@@ -78,5 +72,5 @@
 <% end %>
 <div id="map" style="width: 100%; height: 1000px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-</div>
+
 

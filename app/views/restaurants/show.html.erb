@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1526234362653-3b75a0c07438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
     <div class="container">
         <h1>
             <%= @restaurant.name %>
@@ -6,7 +6,7 @@
     </div>
 </div>
 <div class="restaurant">
-    <div class="container p-2">
+
         <div class="description">
             <%= link_to "X", restaurants_path, class: "btn btn-back"%>
             <h3>
@@ -37,7 +37,7 @@
                 <div class="collapse" id="collapseExample">
                     <div class="cards ">
                         <% @meals.each do |meal| %>
-                        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80);">
+                        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80);">
                             <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal">
                                 <%= meal.name %>
                             </button>
@@ -58,9 +58,6 @@
 
                                             <%= meal.description %>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn" data-dismiss="modal">Ok</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -77,8 +74,8 @@
                 <div class="collapse" id="collapseExample2">
                     <div class="cards ">
                         <% @meals.each do |meal| %>
-                        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);">
-                            <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal2">
+                        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);">
+                            <button type="button" class="btn btn-ghost " data-toggle="modal" data-target="#exampleModal2">
                                 <%= meal.name %>
                             </button>
                             <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
@@ -118,7 +115,7 @@
                     <div class="collapse" id="collapseExample3">
                         <div class="cards ">
                             <% @meals.each do |meal| %>
-                            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+                            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
                                 <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal3">
                                     <%= meal.name %>
                                 </button>
@@ -152,5 +149,5 @@
                 </div>
             </div>
         </div>
-    </div>
+
 </div>
