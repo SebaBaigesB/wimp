@@ -1,6 +1,8 @@
 
 puts "Creating user"
-user = User.create(email: 'coco@example.com', password: 'azerty')
+user = User.create(email: 'coco@example.com', password: 'azerty', role: 'owner')
+user = User.create(email: 'seb@example.com', password: 'azerty', role: 'user')
+
 
 puts "Creating restaurants"
 10.times do
