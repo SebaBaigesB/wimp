@@ -2,10 +2,12 @@ import "bootstrap";
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { initMapbox } from '../plugins/init_mapbox';
-
+import { initMapbox2 } from '../plugins/init_mapbox2';
 initMapbox();
+initMapbox2();
 
-const map = document.getElementById('map');
+
+// const map = document.getElementById('map');
 const mapButton = document.getElementById('map-button');
 
 mapButton.addEventListener('click', (e) => {

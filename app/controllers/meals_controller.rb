@@ -1,11 +1,5 @@
 class MealsController < ApplicationController
-  before_action :set_meal, only: [:show, :edit, :update, :destroy]
-  def index
-    @meals = Meal.all
-  end
-
-  def show
-  end
+  before_action :set_meal, only: [:show]
 
   def new
     @restaurant = Restaurant.where(user: current_user).first
@@ -26,11 +20,17 @@ class MealsController < ApplicationController
   end
 
   def edit
+    @restaurant = Restaurant.where(user: current_user).first
+    @tags = Tag.all
+    @meal = Meal.find(params[:id])
   end
 
   def update
+    @restaurant = Restaurant.where(user: current_user).first
+    @tags = Tag.all
+    @meal = Meal.find(params[:id])
     if @meal.update(meal_params)
-      redirect_to @owner_meal, notice: 'Your meal was successfully updated.'
+      redirect_to restaurant_path(@restaurant), notice: 'Your meal was successfully updated.'
     else
       render :edit
     end
