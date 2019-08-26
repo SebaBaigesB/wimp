@@ -2,7 +2,9 @@
   position: relative;
   width: 250px;
   left: 20%;
+
 }
+
 
 .restaurant input {
   position: absolute;
@@ -12,12 +14,11 @@
 .restaurant label {
   display: block;
   position: relative;
-  margin: 12px;
-  padding: 15px 30px 15px 80px;
-  border: 3px solid #fff;
+  margin: 5px;
+  padding: 11px 23px 8px 57px;
   border-radius: 100px;
-  color: #fff;
-  background-color: #e6af2e;
+  color: #0e0000;
+  background-color: #e6af2e99;
   box-shadow: 0 0 2px rgba(0, 0, 0, .2);
 }
 
@@ -27,16 +28,17 @@
   position: absolute;
   top: 10px;
   bottom: 10px;
-  left: 10px;
-  width: 32px;
-  border: 3px solid #fff;
+  left: 14px;
+  width: 23px;
+  border: 3px solid white;
   border-radius: 100px;
-  transition: background-color .2s;
+
 }
 
 
 .restaurant input:checked + label::before {
-  background-color: #fff;
+  background-color: white;
+
 }
 
  #rest {
@@ -50,6 +52,7 @@
     justify-content: space-around;
 }
 
-.form-check-inline .form-check-input {
-  position: none;
+.checkbox input[type="checkbox"] {
+    opacity: 0;
 }
+
