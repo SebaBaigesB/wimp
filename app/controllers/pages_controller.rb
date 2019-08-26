@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     if current_user
-    @restaurant = current_user.restaurant
+      @restaurant = current_user.restaurant
     end
   end
 end

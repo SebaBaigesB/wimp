@@ -12,6 +12,8 @@ class Owners::RestaurantsController < ApplicationController
   end
 
   def create
+    @current_user = Restaurant.where(user: current_user)
+    @restaurant = Restaurant.new
   end
 
   def edit
