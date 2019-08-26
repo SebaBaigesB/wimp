@@ -1,25 +1,7 @@
-// @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
-
-// *, *::before, *::after {
-//   box-sizing: border-box;
-// }
-
-// html {
-//   min-height: 50%;
-// }
-
-// body {
-//   color: #435757;
-//   background: radial-gradient(#fff, #dac4cd);
-//   font: 1em;
-// }
-
 .toggle-container {
   position: relative;
   width: 250px;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%); // Modifie la position des boxs
+  left: 20%;
 }
 
 .restaurant input {
@@ -35,12 +17,8 @@
   border: 3px solid #fff;
   border-radius: 100px;
   color: #fff;
-  background-color: #6a8494;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
-  // white-space: nowrap;
-  cursor: pointer;
-  user-select: none;
-  // transition: background-color .2s, box-shadow .2s;
+  background-color: #e6af2e;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .2);
 }
 
 .restaurant label::before {
@@ -70,4 +48,8 @@
      display: flex;
      align-items: center;
     justify-content: space-around;
+}
+
+.form-check-inline .form-check-input {
+  position: none;
 }

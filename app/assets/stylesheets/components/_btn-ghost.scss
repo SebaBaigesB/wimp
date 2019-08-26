@@ -1,9 +1,10 @@
 .btn-ghost {
   color: white;
   font-weight: lighter;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-  font-size: 12px;
+  opacity: 0.9;
+  font-size: 18px;
+  display: flex;
+  text-align: center;
 }
 
 .btn-ghost:hover {
