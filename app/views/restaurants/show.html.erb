@@ -137,7 +137,9 @@
 
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal">Ok</button>
+                                              <% tag.each do |tag| %>
+                                              <%= tag.title %>
+                                              <% end %>
                                             </div>
                                         </div>
                                     </div>
