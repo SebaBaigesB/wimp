@@ -2,6 +2,17 @@ it:
   tags:
     index:
         allergi: "Hai qualche allergia ?"
-        food: "Preferenze alimentari?"
+        food: "Regimi alimentari?"
         valid: "Convalida!"
         skip: "Salta"
+  restaurants:
+    index:
+        food: "Stile alimentare"
+        dist: "Distanza"
+        allergy: "Allergia"
+        choose: "Scegli lo stile di cibo che desideri mangiare"
+    show:
+        descr: "Descrizione :"
+        start: "Antipasti"
+        main: "Piatti principali"
+        dess: "Dolci"

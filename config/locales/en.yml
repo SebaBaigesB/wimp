@@ -2,7 +2,7 @@ en:
   tags:
     index:
         allergi: "Do you have any allergies ?"
-        food: "Food preferences ?"
+        food: "Dietary ?"
         valid: "Validate !"
         skip: "Skip this part"
   restaurants:

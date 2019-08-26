@@ -2,6 +2,17 @@ ko:
   tags:
     index:
         allergi: "알레르기가 있나요 ?"
-        food: "음식 선호도?"
+        food: "다이어트?"
         valid: "확인!"
         skip: "이 부분을 건너 뛰십시오"
+  restaurants:
+    index:
+        food: "음식 스타일"
+        dist: "거리"
+        allergy: "알레르기"
+        choose: "먹고 싶은 음식 스타일을 선택하십시오"
+    show:
+        descr: "기술 :"
+        start: "초보자"
+        main: "주요 코스"
+        dess: "디저트"
