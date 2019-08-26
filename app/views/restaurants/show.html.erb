@@ -17,6 +17,17 @@
                 <%= @restaurant.description %>
             </p>
         </div>
+
+        <% if current_user == @restaurant.user %>
+          <div class="d-flex">
+            <%= link_to 'Add a dish', new_restaurant_meal_path(@restaurant), class: "btn btn-primary" %>
+            <%= link_to 'Edit a dish', root_path, class: 'btn btn-primary' %>
+            <%= link_to "Remove a dish", root_path, class: "btn btn-danger mr-5",
+                                  method: :delete,
+                                  data: { confirm: "Do you really want to remove that dish from the list?" } %>
+          </div>
+        <% end %>
+
         <div class="menu">
             <div class="starter p-2">
                 <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
