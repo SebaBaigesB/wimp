@@ -1,7 +1,7 @@
 .toggle-container {
   position: relative;
   width: 250px;
-  left: 20%;
+  left: 25%;
 
 }
 
@@ -9,12 +9,15 @@
 .restaurant input {
   position: absolute;
   left: -9999px;
+
+  clear: both;
+  overflow: hidden;
 }
 
 .restaurant label {
   display: block;
   position: relative;
-  margin: 5px;
+  margin: 12px;
   padding: 11px 23px 8px 57px;
   border-radius: 100px;
   color: #0e0000;
@@ -30,29 +33,28 @@
   bottom: 10px;
   left: 14px;
   width: 23px;
-  border: 3px solid white;
+  border: 1px solid black;
   border-radius: 100px;
+
 
 }
 
 
 .restaurant input:checked + label::before {
-  background-color: white;
+  background-color: black;
 
 }
 
- #rest {
-    background-position: center;
-    margin: 15px;
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-     display: flex;
-     align-items: center;
-    justify-content: space-around;
-}
+//  #rest {
+//     background-position: center;
+//     margin: 15px;
+//     width: 100%;
+//     border-radius: 20px;
+//     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-around;
+// }
 
-.checkbox input[type="checkbox"] {
-    opacity: 0;
-}
+
 

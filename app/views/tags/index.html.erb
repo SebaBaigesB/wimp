@@ -27,9 +27,11 @@
         </div>
 
 </fieldset>
-  <div class="btn button2 justify-content-end"><%= f.button :submit, t('.valid') %></div>
-<% end %>
+  <div class="button2"><%= f.button :submit, t('.valid') %></div>
+  <br><br>
+  <div class=" button2 " id="skip">
+    <%= link_to t('.skip'), restaurants_path, method: :get, class: "button2" %>
 </div>
-<div class="btn button2 " id="skip">
-    <%= link_to t('.skip'), restaurants_path, method: :get %>
+
+<% end %>
 </div>
