@@ -38,10 +38,10 @@
                     <div class="cards ">
                         <% @meals.each do |meal| %>
                         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80);">
-                            <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal">
+                            <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#modal-<%= meal.id %>">
                                 <%= meal.name %>
                             </button>
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="modal-<%= meal.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
