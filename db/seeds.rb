@@ -1,7 +1,6 @@
 
 puts "Creating user"
 user = User.create(email: 'coco@example.com', password: 'azerty', role: 'owner', nickname: 'supercoco')
-user = User.create(email: 'seb@example.com', password: 'azerty', role: 'user')
 
 
 puts "Creating restaurants"
@@ -14,7 +13,7 @@ puts "Creating restaurants"
   # desc = Faker::Restaurant.description
 
 puts "Creating user"
-user = User.create(email: 'xavier@example.com', password: 'azerty')
+user = User.create(email: 'xavier@example.com', password: 'azerty', nickname: 'xav')
 
 puts "Creating restaurants"
   name = Faker::Restaurant.name
