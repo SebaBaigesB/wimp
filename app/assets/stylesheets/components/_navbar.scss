@@ -2,7 +2,7 @@
   justify-content: space-between;
   background-color: transparent;
   font-family: Parisienne;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,7 +14,14 @@
 }
 
 .navbar-nav {
-  margin-left: 10px;
-  display: flex;
-  justify-content: space-between;
+  margin-left: 120px;
+  color: #ccb379;
+}
+
+.nav-item {
+  color: #ccb379;
+}
+
+.nav-item a {
+  color: #ccb379;
 }
