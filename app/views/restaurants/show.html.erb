@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), cl_image_tag @restaurant.photo, height: 300, width: 400, crop: :fill;">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('<%= cl_image_path @restaurant.photo, height: 300, width: 400, crop: :fill %>');">
     <div class="container">
         <h1>
             <%= @restaurant.name %>
@@ -33,7 +33,7 @@
                 <div class="cards ">
                     <% @restaurant.meals.each do |meal| %>
                     <% if meal.course == 'Entry' %>
-                    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), cl_image_tag @meal.photo, height: 300, width: 400, crop: :fill;">
+                    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path @meal.photo, height: 300, width: 400, crop: :fill %>');">
                         <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#modal-<%= meal.id %>">
                             <%= meal.name %>
                         </button>
@@ -80,7 +80,7 @@
                 <div class="cards ">
                     <% @restaurant.meals.each do |meal| %>
                     <% if meal.course == 'Main' %>
-                    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), cl_image_tag @meal.photo, height: 300, width: 400, crop: :fill;">
+                    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path @meal.photo, height: 300, width: 400, crop: :fill %>');">
                         <button type="button" class="btn btn-ghost " data-toggle="modal" data-target="#modal-<%= meal.id %>">
                             <%= meal.name %>
                         </button>
@@ -120,7 +120,7 @@
                             <div class="cards ">
                                 <% @restaurant.meals.each do |meal| %>
                                 <% if meal.course == 'Dessert' %>
-                                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), cl_image_tag @meal.photo, height: 300, width: 400, crop: :fill;">
+                                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path @meal.photo, height: 300, width: 400, crop: :fill %>');">
                                     <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal3">
                                         <%= meal.name %>
                                     </button>
