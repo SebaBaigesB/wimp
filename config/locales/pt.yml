@@ -16,3 +16,8 @@ pt:
         start: "Aperitivos"
         main: "Cursos principais"
         dess: "Sobremesas"
+        add: "Adicione um prato"
+        edit: "Acrescentar um prato"
+        conf: "Você realmente quer remover esse prato da lista?"
+        remove: "Suprimir um prato"
+        review: "Criar uma revisão"

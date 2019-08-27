@@ -16,3 +16,8 @@ it:
         start: "Antipasti"
         main: "Piatti principali"
         dess: "Dolci"
+        add: "Aggiungi un piatto"
+        edit: "Modifica un piatto"
+        conf: "Vuoi veramente rimuovere quel piatto dalla lista?"
+        remove: "Rimuovi un piatto"
+        review: "Crea la tua recensione"
