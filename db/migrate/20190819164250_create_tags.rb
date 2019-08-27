@@ -8,7 +8,7 @@ class CreateTags < ActiveRecord::Migration[5.2]
 
     reversible do |dir|
       dir.up do
-        Tag.create_translation_table! :title => :string
+        Tag.create_translation_table! title: :string
       end
       dir.down do
         Tag.drop_translation_table!
