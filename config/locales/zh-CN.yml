@@ -16,4 +16,9 @@ zh-CN:
         start: "首发"
         main: "主修课"
         dess: "甜品"
+        add: "加一道菜"
+        edit: "编辑一道菜"
+        conf: "你真的想从列表中删除那道菜吗？"
+        remove: "取出一道菜"
+        review: "创建您的评论"
 

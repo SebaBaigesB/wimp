@@ -16,4 +16,9 @@ de:
         start: "Vorspeisen"
         main: "Hauptgänge"
         dess: "Nachspeisen"
+        add: "Fügen Sie eine Schüssel hinzu"
+        edit: "Bearbeiten Sie ein Gericht"
+        conf: "Möchten Sie dieses Gericht wirklich von der Liste entfernen?"
+        remove: "Nehmen Sie eine Schüssel heraus"
+        review: "Erstellen Sie Ihre Bewertung"
 

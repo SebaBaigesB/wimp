@@ -16,3 +16,8 @@ en:
         start: "Starters"
         main: "Main-Courses"
         dess: "Desserts"
+        add: "Add a dish"
+        edit: "Edit a dish"
+        conf: "Do you really want to remove that dish from the list?"
+        remove: "Remove a dish"
+        review: "Create your review"
