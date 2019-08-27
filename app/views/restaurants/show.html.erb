@@ -162,6 +162,7 @@
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+  <i class="fas fa-crosshairs"></i>
   <br>
   <%= link_to "Create your review", new_restaurant_review_path(@restaurant.id), class: "btn btn-review" %>
     <ul>   <% @restaurant.reviews.each do |review| %>
