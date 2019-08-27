@@ -6,6 +6,7 @@
     </div>
 </div>
 <div class="restaurant">
+
   <div class="container">
     <div class="description">
         <%= link_to "X", restaurants_path, class: "btn btn-back"%>
@@ -152,6 +153,11 @@
                         </div>
                     </div>
                 </div>
+                  <%= link_to "Create your review", new_restaurant_review_path(@restaurant.id), class: "btn btn-warning" %>
+                    <ul>   <% @restaurant.reviews.each do |review| %>
+                    <li>   <%= review.content %></li>
+                    <li> <%= user. %></li>
+                    <% end %></ul>
             </div>
         </div>
         <div

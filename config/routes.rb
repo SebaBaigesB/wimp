@@ -10,6 +10,7 @@ Rails.application.routes.draw do
         resources :meal_tags
       end
     end
+    resources :reviews, only: [ :show, :edit, :update, :destroy ]
     resources :tags, only: [:index]
     namespace :owners do
       resources :restaurants
