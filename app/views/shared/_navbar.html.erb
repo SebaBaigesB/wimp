@@ -3,38 +3,46 @@
     <%= image_tag "logo_.png", alt: "logo" %>
   <% end %>
 
+<%= link_to "Sign in", new_user_session_path, class: "nav-link btn-chief" %>
+
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
 
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
     <ul class="navbar-nav mr-auto">
+
+
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Language", root_path, class: "nav-link" %>
+          <%= link_to "- Language", root_path, class: "nav-link" %>
         </li>
-        <li><a class="nav-item" type="button" data-toggle="modal" data-target="#FoodModal" class="tab-underlined" id="food"><%= t('.food') %></a>
+        <li>- <a class="nav-item" type="button" data-toggle="modal" data-target="#FoodModal" class="tab-underlined" id="food"><%= t('.food') %></a>
         </li>
-        <li><a href="tags" class="nav-item tab-underlined">
+        <li>- <a href="tags" class="nav-item ">
           <%= t('.allergy') %></a></li>
-        <li class="nav-item3">
-          <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+        <li class="nav-item p-x-2 ">
+          <%= link_to "- Sign out", destroy_user_session_path, method: :delete %>
         </li>
         <!-- <li class="nav-item dropdown">
-          <%#= image_tag "logo_.png", alt: "logo", width: 50, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <#%= image_tag "logo_.png", alt: "logo", width: 50, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%#= link_to "Action", "#", class: "dropdown-item" %>
-            <%#= link_to "Another action", "#", class: "dropdown-item" %>
+            <li class="nav-item p-x-2 ">
+              <%#= link_to "- Sign out", destroy_user_session_path, method: :delete %>
+            </li>
           </div>
         </li> -->
       <%# if current_user %>
         <%#= link_to "Sign in", restaurant_path(@restaurants), class: "nav-link btn-chief" %>
-      <% else %>
+     <!--  <#% else %>
       <li class="nav-item">
-        <%= link_to "Sign in", new_user_session_path, class: "nav-link btn-chief" %>
+        <%#= link_to "Sign in", new_user_session_path, class: "nav-link btn-chief" %>
+      </li>-->
       <% end %>
-      </li>
     </ul>
   </div>
 </div>

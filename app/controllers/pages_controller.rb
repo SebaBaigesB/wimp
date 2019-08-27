@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     if current_user
-        @restaurants = Restaurant.where(user_id: current_user.id)
+      @restaurant = Restaurant.find_by(user: current_user, id: params[:restaurant_id])
     end
   end
 end

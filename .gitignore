@@ -15,3 +15,4 @@ yarn-error.log
 .env*
 .env*
 credentials*
+google_translate_api_key.json
