@@ -16,14 +16,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li>- <a class="nav-item" type="button" data-toggle="modal" data-target="#FoodModal" class="tab-underlined" id="food"><%= t('.food') %> style</a>
-        </li>
-        <li>- <a href="tags" class="nav-item ">
-          <%= t('.allergy') %></a>
-        </li>
-        <li class="nav-item">
-          <%= link_to "- Language", root_path, class: "nav-item" %>
-        </li>
+        <% if current_page?(restaurants_path) %>
+          <li>- <a class="nav-item" type="button" data-toggle="modal" data-target="#FoodModal" class="tab-underlined" id="food"><%= t('.food') %> style</a>
+          </li>
+          <li>- <a href="tags" class="nav-item ">
+            <%= t('.allergy') %></a>
+          </li>
+        <% end %>
+        <% if current_page?(root_path) %>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "- Language", root_path, class: "nav-item" %>
+          </li>
+        <% end %>
         <br>
         <li class="nav-item">
           <%= link_to "x Log out x ", destroy_user_session_path, method: :delete %>
