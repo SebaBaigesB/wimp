@@ -3,7 +3,7 @@ pt:
     index:
         allergi: "Você tem alguma alergia ?"
         food: "Dieta ?"
-        valid: "Valide!"
+        valid: "Valide"
         skip: "Pule esta parte"
   restaurants:
     index:
@@ -12,7 +12,7 @@ pt:
         allergy: "Alergia"
         choose: "Escolha o estilo de comida que você gostaria de comer"
     show:
-        descr: "Descrição :"
+        descr: "Descrição"
         start: "Aperitivos"
         main: "Cursos principais"
         dess: "Sobremesas"

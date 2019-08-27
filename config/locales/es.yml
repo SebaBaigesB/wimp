@@ -3,7 +3,7 @@ es:
     index:
         allergi: "Usted tiene alergias ?"
         food: "Regímenes alimentarios ?"
-        valid: "Validar !"
+        valid: "Validar"
         skip: "Omitir"
   restaurants:
     index:
@@ -11,7 +11,7 @@ es:
         dist: "Distancia"
         allergi: "Alergia"
     show:
-        descr: "Descripción :"
+        descr: "Descripción "
         start: "Primeros Platos"
         main: "Segundos Platos"
         dess: "Postres"

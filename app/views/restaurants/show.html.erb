@@ -1,4 +1,6 @@
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('<%= cl_image_path @restaurant.photo, height: 300, width: 400, crop: :fill %>');">
+
     <div class="container">
         <h1>
             <%= @restaurant.name %>
@@ -172,9 +174,27 @@
                 <% end %>
             </ul>
         </div>
-        <% if current_user == @restaurant.user %>
+      </div>
+  </div>
+  <div
+    id="map2"
+    style="width: 100%;
+    height: 150px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+  <i class="fas fa-crosshairs"></i>
+  <br>
+  <%= link_to "Create your review", new_restaurant_review_path(@restaurant.id), class: "btn btn-review" %>
+    <ul>   <% @restaurant.reviews.each do |review| %>
+    <li> <%= review.user.nickname %></li>
+    <li>   <%= review.content %></li>
+  <% end %></ul>
+</div>
+  <% if current_user == @restaurant.user %>
         <div class="d-flex">
             <%= link_to 'Delete your restaurant', owners_restaurant_path(@restaurant), class: "btn btn-primary", method: :delete,
                                         data: { confirm: "Do you really want to delete your dear restaurant ?"} %>
         </div>
         <% end %>
+
