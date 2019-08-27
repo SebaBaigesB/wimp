@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2019_08_26_165634) do
     t.float "latitude"
     t.integer "food_style"
     t.string "menu_language"
-    t.string "photos"
+    t.string "photo"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
