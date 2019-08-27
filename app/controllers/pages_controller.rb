@@ -3,12 +3,7 @@ class PagesController < ApplicationController
 
   def home
     if current_user
-      if current_user.role == "owner"
-        @restaurant = Restaurant.where(user_id: current_user.id)
-        redirect_to restaurants_path(@restaurants)
-      else current_user.role == "user"
-        redirect_to restaurants_path
-      end
+      @restaurants = Restaurant.where(user_id: current_user).first
     end
   end
 end
