@@ -1,6 +1,5 @@
 require "google/cloud/translate"
 
-
 class TranslateApiService
   def initialize
     @project_id = "whatsinmyplate"
