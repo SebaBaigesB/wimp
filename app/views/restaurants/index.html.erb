@@ -1,17 +1,11 @@
 <div class="restaurant">
   <%= link_to "sign_out", destroy_user_session_path, method: :delete %>
+  <%= link_to "Create a restaurant", new_restaurant_path %>
     <div class="stick-me awsome col-2" id="map-button">
         <i class="fas fa-arrow-alt-circle-left "></i>
         <p>Map</p>
     </div>
-    <ul class="list-inline tabs-underlined">
-        <li><a type="button" data-toggle="modal" data-target="#FoodModal" class="tab-underlined" id="food"><%= t('.food') %></a>
-        </li>
-        <li> <%= link_to (image_tag "logo_.png", alt: "logo_", width: 130), root_path%>
-        </li>
-        <li><a href="tags" class="tab-underlined">
-                <%= t('.allergy') %></a></li>
-    </ul>
+
     <div class="modal fade" id="FoodModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -53,7 +47,7 @@
 <% @restaurants.each do |restaurant| %>
 <div class="rows d-flex" id="rest">
     <div class="col-sm card-trip">
-        <img src="https://images.unsplash.com/photo-1517142099008-c2eb9227b575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1985&q=80" />
+        <%= cl_image_tag restaurant.photo, height: 300, width: 400, crop: :fill %>
         <div class="card-trip-infos">
             <div>
                 <div class="name text-center">
@@ -68,10 +62,11 @@
             </div>
             <h2 class="card-trip-pricing">150m</h2>
         </div>
-    </div>
+    </div
 </div>
 <% end %>
 <div id="map" style="width: 100%; height: 1000px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  <i class="fas fa-crosshairs" id="geoloc-target"></i>
 </div>
 
 

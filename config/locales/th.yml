@@ -3,7 +3,7 @@ th:
     index:
         allergi: "คุณมีอาการแพ้ใด ๆ ?"
         food: "อาหาร ?"
-        valid: "ตรวจสอบ!"
+        valid: "ตรวจสอบ"
         skip: "ข้ามส่วนนี้"
   restaurants:
      index:
@@ -12,7 +12,7 @@ th:
          allergy: "โรคภูมิแพ้"
          choose: "เลือกสไตล์อาหารที่คุณต้องการทาน"
      show:
-         descr: "ลักษณะ :"
+         descr: "ลักษณะ"
          start: "อาหารจานหลัก"
          main: "จานหลัก"
          dess: "ของหวาน"

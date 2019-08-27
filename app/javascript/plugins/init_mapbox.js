@@ -44,7 +44,19 @@ const initMapbox = () => {
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
+    const geoLoc = document.getElementById('geoloc-target');
+
+    geoLoc.addEventListener('click', () => {
+      navigator.geolocation.getCurrentPosition((data) => {
+        const lat = data.coords.latitude;
+        const long = data.coords.longitude;
+        console.log(lat, long);
+        map.flyTo({center: [long, lat], zoom: 15});
+      });
+    });
   }
 };
+
+
 
 export { initMapbox };

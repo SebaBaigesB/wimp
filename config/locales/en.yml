@@ -3,8 +3,8 @@ en:
     index:
         allergi: "Do you have any allergies ?"
         food: "Dietary ?"
-        valid: "Validate !"
-        skip: "Skip this part"
+        valid: "Validate"
+        skip: "Skip"
   restaurants:
     index:
         food: "Food Style"
@@ -12,7 +12,7 @@ en:
         allergy: "Allergy"
         choose: "Choose the food style you would like the eat"
     show:
-        descr: "Description :"
+        descr: "Description"
         start: "Starters"
         main: "Main-Courses"
         dess: "Desserts"

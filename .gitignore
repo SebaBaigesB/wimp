@@ -13,4 +13,5 @@ node_modules
 yarn-error.log
 .byebug_history
 .env*
+credentials*
 google_translate_api_key.json
