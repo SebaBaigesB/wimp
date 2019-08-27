@@ -15,7 +15,7 @@
         </h3>
         <p> Dans une ambiance chaleureuse et décontractée plonger dans un décor au cadre idyllique unique et convivial.
             Venez découvrir la cuisine du moment, raffinée, gastronomique moderne mais aussi traditionnelle.
-            <%= @restaurant.description %>
+            <%= @restaurant.story %>
         </p>
         </div>
     </div>
@@ -155,8 +155,8 @@
                 </div>
                   <%= link_to "Create your review", new_restaurant_review_path(@restaurant.id), class: "btn btn-warning" %>
                     <ul>   <% @restaurant.reviews.each do |review| %>
+                    <li> <%= review.nickname %></li>
                     <li>   <%= review.content %></li>
-                    <li> <%= user. %></li>
                     <% end %></ul>
             </div>
         </div>
