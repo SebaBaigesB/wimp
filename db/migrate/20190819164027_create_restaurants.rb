@@ -4,7 +4,6 @@ class CreateRestaurants < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :address
       t.string :front_photo
-      t.string :description
       t.float :longitude
       t.float :latitude
       t.integer :food_style
@@ -13,6 +12,14 @@ class CreateRestaurants < ActiveRecord::Migration[5.2]
       t.references :user, foreign_key: true
 
       t.timestamps
+    end
+    reversible do |dir|
+      dir.up do
+        Restaurant.create_translation_table! story: :string
+      end
+      dir.down do
+        Restaurant.drop_translation_table!
+      end
     end
   end
 end
