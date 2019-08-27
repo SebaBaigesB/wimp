@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   scope '(:locale)', locale: /fr|es|de|it|zh-CN|ja|pt|ko|el|ru|th/ do
-    resources :restaurants, only: [:index, :show, :new, :create] do
+    resources :restaurants, only: [:index, :show, :new, :create, :destroy] do
       resources :reviews, only: [:new, :create]
       resources :meals, only: [:index, :show, :new, :create, :edit, :update ] do
 
