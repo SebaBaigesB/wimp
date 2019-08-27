@@ -29,4 +29,25 @@ class RestaurantsController < ApplicationController
         image_url: helpers.asset_url('resto.jpg')
       }]
   end
+
+  def new
+    @restaurant = Restaurant.new
+  end
+
+  def create
+    @restaurant = Restaurant.new(resto_params)
+    @restaurant.user = current_user
+    if @restaurant.save
+      redirect_to restaurant_path(@restaurant)
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def resto_params
+    params.require(:restaurant).permit(:name, :address, :photo, :food_style)
+  end
+
 end
