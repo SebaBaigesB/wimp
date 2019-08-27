@@ -1,17 +1,9 @@
 <div class="restaurant">
-  <%= link_to "sign_out", destroy_user_session_path, method: :delete %>
     <div class="stick-me awsome col-2" id="map-button">
         <i class="fas fa-arrow-alt-circle-left "></i>
         <p>Map</p>
     </div>
-    <ul class="list-inline tabs-underlined">
-        <li><a type="button" data-toggle="modal" data-target="#FoodModal" class="tab-underlined" id="food"><%= t('.food') %></a>
-        </li>
-        <li> <%= link_to (image_tag "logo_.png", alt: "logo_", width: 130), root_path%>
-        </li>
-        <li><a href="tags" class="tab-underlined">
-                <%= t('.allergy') %></a></li>
-    </ul>
+
     <div class="modal fade" id="FoodModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
