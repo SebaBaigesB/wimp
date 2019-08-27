@@ -24,19 +24,10 @@ ActiveRecord::Schema.define(version: 2019_08_26_165634) do
     t.index ["tag_id"], name: "index_meal_tags_on_tag_id"
   end
 
-  create_table "meal_translations", force: :cascade do |t|
-    t.bigint "meal_id", null: false
-    t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
-    t.string "description"
-    t.index ["locale"], name: "index_meal_translations_on_locale"
-    t.index ["meal_id"], name: "index_meal_translations_on_meal_id"
-  end
-
   create_table "meals", force: :cascade do |t|
+    t.string "name"
     t.float "price"
+    t.string "description"
     t.bigint "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -45,20 +36,11 @@ ActiveRecord::Schema.define(version: 2019_08_26_165634) do
     t.index ["restaurant_id"], name: "index_meals_on_restaurant_id"
   end
 
-  create_table "restaurant_translations", force: :cascade do |t|
-    t.bigint "restaurant_id", null: false
-    t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "story"
-    t.index ["locale"], name: "index_restaurant_translations_on_locale"
-    t.index ["restaurant_id"], name: "index_restaurant_translations_on_restaurant_id"
-  end
-
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.string "front_photo"
+    t.string "description"
     t.float "longitude"
     t.float "latitude"
     t.integer "food_style"
