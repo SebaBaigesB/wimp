@@ -3,6 +3,8 @@ import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the styleshe
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initMapbox2 } from '../plugins/init_mapbox2';
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+initUpdateNavbarOnScroll();
 initMapbox();
 initMapbox2();
 
@@ -16,11 +18,3 @@ mapButton.addEventListener('click', (e) => {
   } else map.style.display = 'none';
 })
 
-
-// const food = document.getElementById('food');
-
-// food.addEventListener('click', () => {
-//   if (map.style.display === 'none') {
-//     map.style.display = 'block';
-//   } else map.style.display = 'none';
-// })
