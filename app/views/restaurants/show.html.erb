@@ -9,169 +9,162 @@
 
   <div class="container">
     <div class="description">
-        <%= link_to "X", restaurants_path, class: "btn btn-back"%>
-        <h3>
-            <%= t('.descr') %>
-        </h3>
-        <p> Dans une ambiance chaleureuse et décontractée plonger dans un décor au cadre idyllique unique et convivial.
-            Venez découvrir la cuisine du moment, raffinée, gastronomique moderne mais aussi traditionnelle.
-            <%= @restaurant.description %>
-        </p>
+      <%= link_to "X", restaurants_path, class: "btn btn-back"%>
+      <h3>
+          <%= t('.descr') %>
+      </h3>
+      <p> Dans une ambiance chaleureuse et décontractée plonger dans un décor au cadre idyllique unique et convivial.
+          Venez découvrir la cuisine du moment, raffinée, gastronomique moderne mais aussi traditionnelle.
+          <%= @restaurant.description %>
+      </p>
+    </div>
+  </div>
+    <% if current_user == @restaurant.user %>
+      <div class="d-flex">
+        <%= link_to 'Add a dish', new_restaurant_meal_path(@restaurant), class: "btn btn-primary" %>
+
+      </div>
+    <% end %>
+  <div class="menu">
+      <div class="starter p-2">
+        <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <h1>
+                <%= t('.start') %> +</h1>
+        </a>
+        <div class="collapse" id="collapseExample">
+            <div class="cards ">
+                <% @meals.each do |meal| %>
+                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80);">
+                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#modal-<%= meal.id %>">
+                        <%= meal.name %>
+                    </button>
+                    <div class="modal fade" id="modal-<%= meal.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">
+                                        <%= meal.name %> - <%= meal.price %> €
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <%= cl_image_tag meal.photo, height: 300, width: 300, crop: :fill %>
+                                    <%= meal.description %>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn" data-dismiss="modal">Ok</button>
+                                    <% if current_user == @restaurant.user %>
+                                      <%= link_to 'Edit a dish', edit_restaurant_meal_path(@restaurant, meal), class: 'btn btn-primary' %>
+                                      <%= link_to "Remove a dish", root_path, class: "btn btn-danger mr-5",
+                                                          method: :delete,
+                                                          data: { confirm: "Do you really want to remove that dish from the list?" } %>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% end %>
+            </div>
         </div>
     </div>
-        <% if current_user == @restaurant.user %>
-          <div class="d-flex">
-            <%= link_to 'Add a dish', new_restaurant_meal_path(@restaurant), class: "btn btn-primary" %>
+    <div class="main-course p-2">
+        <a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+            <h1>
+                <%= t('.main') %> +</h1>
+        </a>
+        <div class="collapse" id="collapseExample2">
+            <div class="cards ">
+                <% @meals.each do |meal| %>
+                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);">
+                    <button type="button" class="btn btn-ghost " data-toggle="modal" data-target="#modal-<%= meal.id %>">
+                        <%= meal.name %>
+                    </button>
+                    <div class="modal fade" id="modal-<%= meal.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">
+                                        <%= meal.name %> - <%= meal.price %> €
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80" alt="" >
 
-          </div>
-        <% end %>
-
-        <div class="menu">
-            <div class="starter p-2">
-                <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    <h1>
-                        <%= t('.start') %> +</h1>
-                </a>
-                <div class="collapse" id="collapseExample">
-                    <div class="cards ">
-                        <% @meals.each do |meal| %>
-                        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80);">
-                            <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#modal-<%= meal.id %>">
-                                <%= meal.name %>
-                            </button>
-                            <div class="modal fade" id="modal-<%= meal.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">
-                                                <%= meal.name %> - <%= meal.price %> €
-                                            </h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <%= cl_image_tag meal.photo, height: 300, width: 300, crop: :fill %>
-                                            <%= meal.description %>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn" data-dismiss="modal">Ok</button>
-                                            <% if current_user == @restaurant.user %>
-                                              <%= link_to 'Edit a dish', edit_restaurant_meal_path(@restaurant, meal), class: 'btn btn-primary' %>
-                                              <%= link_to "Remove a dish", root_path, class: "btn btn-danger mr-5",
-                                                                  method: :delete,
-                                                                  data: { confirm: "Do you really want to remove that dish from the list?" } %>
-                                            <% end %>
-                                        </div>
-                                    </div>
+                                    <%= meal.description %>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn" data-dismiss="modal">Ok</button>
                                 </div>
                             </div>
                         </div>
-                        <% end %>
                     </div>
                 </div>
-            </div>
-            <div class="main-course p-2">
-                <a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
-                    <h1>
-                        <%= t('.main') %> +</h1>
-                </a>
-                <div class="collapse" id="collapseExample2">
-                    <div class="cards ">
-                        <% @meals.each do |meal| %>
-                        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);">
-                            <button type="button" class="btn btn-ghost " data-toggle="modal" data-target="#modal-<%= meal.id %>">
-                                <%= meal.name %>
-                            </button>
-                            <div class="modal fade" id="modal-<%= meal.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">
-                                                <%= meal.name %> - <%= meal.price %> €
-                                            </h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <img src="https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80" alt="" >
-
-                                            <%= meal.description %>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn" data-dismiss="modal">Ok</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <% end %>
-                    </div>
-                </div>
-            </div>
-            <div class="dessert p-2">
-                <div class="starter p-2">
-                  <a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
-                                  <h1>
-                                      <%= t('.dess') %> +</h1>
-                  </a>
-                    <div class="collapse" id="collapseExample3">
-                        <div class="cards ">
-                            <% @meals.each do |meal| %>
-                            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
-                                <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal3">
-                                    <%= meal.name %>
-                                </button>
-                                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">
-                                                    <%= meal.name %> - <%= meal.price %> €
-                                                </h5>
-                                                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button> -->
-                                            </div>
-                                            <div class="modal-body">
-                                                <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="" >
-
-                                                <%= meal.description %>
-
-                                            </div>
-                                            <div class="modal-footer">
-                                              <% tag.each do |tag| %>
-                                              <%= tag.title %>
-                                              <% end %>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <% end %>
-                        </div>
-                    </div>
-                </div>
-                  <%= link_to "Create your review", new_restaurant_review_path(@restaurant.id), class: "btn btn-warning" %>
-                    <ul>   <% @restaurant.reviews.each do |review| %>
-                    <li>   <%= review.content %></li>
-                    <li> <%= user. %></li>
-                    <% end %></ul>
+                <% end %>
             </div>
         </div>
-        <div
-          id="map2"
-          style="width: 100%;
-          height: 150px;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-        ></div>
-        <br>
-        <div class="review">
-          <%= link_to "Create your review", new_restaurant_review_path(@restaurant.id), class: "btn-review" %>
-          <% @restaurant.reviews.each do |review| %>
-          <%= review.content %>
-          <% end %>
+    </div>
+    <div class="dessert p-2">
+        <div class="starter p-2">
+          <a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+                          <h1>
+                              <%= t('.dess') %> +</h1>
+          </a>
+            <div class="collapse" id="collapseExample3">
+                <div class="cards ">
+                    <% @meals.each do |meal| %>
+                    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+                        <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal3">
+                            <%= meal.name %>
+                        </button>
+                        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">
+                                            <%= meal.name %> - <%= meal.price %> €
+                                        </h5>
+                                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button> -->
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="" >
+
+                                        <%= meal.description %>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                      <% tag.each do |tag| %>
+                                      <%= tag.title %>
+                                      <% end %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
         </div>
+      </div>
+  </div>
+  <div
+    id="map2"
+    style="width: 100%;
+    height: 150px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+  <br>
+  <%= link_to "Create your review", new_restaurant_review_path(@restaurant.id), class: "btn btn-review" %>
+    <ul>   <% @restaurant.reviews.each do |review| %>
+    <li> <%= review.user.nickname %></li>
+    <li>   <%= review.content %></li>
+  <% end %></ul>
 </div>
