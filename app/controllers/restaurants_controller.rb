@@ -18,6 +18,10 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def edit
+    @restaurant = Restaurant.find(params[:id])
+  end
+
   def show
     @restaurant = Restaurant.find(params[:id])
     @meals = Meal.all
@@ -43,6 +47,18 @@ class RestaurantsController < ApplicationController
       render :new
     end
   end
+
+
+    def update
+      @restaurant = Restaurant.find(params[:id])
+      if @restaurant.update(resto_params)
+        redirect_to restaurant_path(@restaurant)
+      else
+        render :new
+      end
+    end
+
+
 
   private
 

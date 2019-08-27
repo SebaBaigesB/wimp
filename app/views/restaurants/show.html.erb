@@ -22,7 +22,7 @@
         <% if current_user == @restaurant.user %>
           <div class="d-flex">
             <%= link_to 'Add a dish', new_restaurant_meal_path(@restaurant), class: "btn btn-primary" %>
-
+            <%= link_to 'Edit the Restaurant details', edit_restaurant_path(@restaurant), class: "btn btn-primary" %>
           </div>
         <% end %>
 
@@ -72,7 +72,6 @@
                         <% end %>
                     </div>
                 </div>
-                <% end %>
             </div>
             <div class="main-course p-2">
                 <a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
@@ -112,7 +111,6 @@
                         <% end %>
                     </div>
                 </div>
-                <% end %>
             </div>
             <div class="dessert p-2">
                 <div class="starter p-2">
@@ -156,7 +154,7 @@
                             <% end %>
                         </div>
                     </div>
-                    <% end %>
+
                 </div>
             </div>
         </div>
