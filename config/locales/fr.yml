@@ -3,7 +3,7 @@ fr:
     index:
         allergi: "Avez-vous des allergies ?"
         food: "Régimes alimentaires ?"
-        valid: "Valider !"
+        valid: "Valider"
         skip: "Passer"
   restaurants:
     index:
@@ -12,7 +12,7 @@ fr:
         allergy: "Allergie"
         choose: "Choisis un style culinaire"
     show:
-        descr: "Description :"
+        descr: "Description"
         start: "Entrées"
         main: "Plats"
         dess: "Desserts"

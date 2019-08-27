@@ -1,6 +1,7 @@
 h2 {
-font-family: Parisienne;
-font-size: 24px;
+  font-family: Parisienne;
+  font-size: 24px;
+  margin-top: 8px;
 }
 
 .funky div {
@@ -30,14 +31,14 @@ font-size: 24px;
 }
 
 .funky label::before {
- content: '';
+  content: '';
   display: block;
   position: absolute;
   top: 6px;
-    bottom: 8px;
-    left: 11px;
-    width: 23px;
-    border: 2px solid black;
+  bottom: 8px;
+  left: 11px;
+  width: 23px;
+  border: 2px solid black;
   border-radius: 100px;
 }
 
