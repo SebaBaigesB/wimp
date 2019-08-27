@@ -8,7 +8,7 @@ class Meal < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
   translates :name, :description
-  after_save :translates_with_api
+  after_create :translates_with_api
 
   def translates_with_api
     translator = TranslateApiService.new
@@ -16,6 +16,7 @@ class Meal < ApplicationRecord
       translate_description = translator.call(text: self.description, local: I18n.locale, target: l)
       translate_name = translator.call(text: self.name, local: I18n.locale, target: l)
       self.attributes = { name: translate_name, description: translate_description, locale: l }
+      self.save
     end
   end
 end
