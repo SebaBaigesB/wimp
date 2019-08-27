@@ -7,5 +7,11 @@ class Meal < ApplicationRecord
   validates :course, inclusion: {in: STATUSES}
 
   mount_uploader :photo, PhotoUploader
-  # translates :name, :description
+  translates :name, :description
+  after_create :translates_with_api
+
+  def translates_with_api
+
+    end
+
 end
