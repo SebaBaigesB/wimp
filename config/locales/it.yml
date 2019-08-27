@@ -3,7 +3,7 @@ it:
     index:
         allergi: "Hai qualche allergia ?"
         food: "Regimi alimentari?"
-        valid: "Convalida!"
+        valid: "Convalida"
         skip: "Salta"
   restaurants:
     index:
@@ -12,7 +12,7 @@ it:
         allergy: "Allergia"
         choose: "Scegli lo stile di cibo che desideri mangiare"
     show:
-        descr: "Descrizione :"
+        descr: "Descrizione"
         start: "Antipasti"
         main: "Piatti principali"
         dess: "Dolci"

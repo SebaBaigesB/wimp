@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
+<div class="banner" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.4),rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
     <div class="container">
         <h1>
             <%= @restaurant.name %>
@@ -28,8 +28,7 @@
   <div class="menu">
       <div class="starter p-2">
         <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            <h1>
-                <%= t('.start') %> +</h1>
+          <h1> <%= t('.start') %> +</h1>
         </a>
         <div class="collapse" id="collapseExample">
             <div class="cards ">

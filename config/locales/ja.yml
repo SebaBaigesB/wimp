@@ -3,7 +3,7 @@ ja:
     index:
         allergi: "あなたはアレルギーを持っていますか ？"
         food: "ダイエット？"
-        valid: "検証 ！"
+        valid: "検証"
         skip: "スキップ"
   restaurants:
     index:
@@ -12,7 +12,7 @@ ja:
         allergy: "アレルギー"
         choose: "食べたい食べ物のスタイルを選択してください"
     show:
-        descr: "説明 :"
+        descr: "説明 "
         start: "スターター"
         main: "メインディッシュ"
         dess: "デザート"
