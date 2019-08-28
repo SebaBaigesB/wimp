@@ -3,7 +3,10 @@ require "google/cloud/translate"
 class TranslateApiService
   def initialize
     @project_id = "whatsinmyplate"
-    @translate = Google::Cloud::Translate.new project: @project_id
+    @translate = Google::Cloud::Translate.new(
+      project: @project_id,
+      keyfile: ENV["GOOGLE_APPLICATION_CREDENTIALS"]
+      )
   end
 
   def call(attrs = {})

@@ -21,3 +21,5 @@ en:
         conf: "Do you really want to remove that dish from the list?"
         remove: "Remove a dish"
         review: "Create your review"
+        del: "Delete your restaurant"
+        rem: "Do you really want to delete your dear restaurant ?"

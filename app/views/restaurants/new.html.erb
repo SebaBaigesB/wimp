@@ -1,6 +1,7 @@
 <%= simple_form_for @restaurant do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
+  <%= f.input :story %>
   <%= f.input :food_style, collection: Restaurant.food_styles.keys %>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
