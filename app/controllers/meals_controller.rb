@@ -4,6 +4,8 @@ class MealsController < ApplicationController
   def new
     @restaurant = Restaurant.find_by(user: current_user, id: params[:restaurant_id])
     @tags = Tag.all
+    @allergy_tags = Tag.where(status: 0)
+    @category_tags = Tag.where(status: 1)
     @new_meal = Meal.new
   end
 
@@ -41,10 +43,10 @@ class MealsController < ApplicationController
   end
 
   def destroy
-    @current_user = Meal.find(user: current_user)
+    @restaurant = Restaurant.find_by(user: current_user, id: params[:restaurant_id])
     @meal = Meal.find(params[:id])
     @meal.destroy
-    redirect_to owner_meals_path
+    redirect_to restaurant_path
   end
 
   private
@@ -54,6 +56,6 @@ class MealsController < ApplicationController
   end
 
   def meal_params
-    params.require(:meal).permit(:name, :description, :photo, :prix, :tag_ids, :course)
+    params.require(:meal).permit(:name, :description, :photo, :price, :tag_ids, :course)
   end
 end
