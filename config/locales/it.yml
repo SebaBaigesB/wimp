@@ -21,3 +21,5 @@ it:
         conf: "Vuoi veramente rimuovere quel piatto dalla lista?"
         remove: "Rimuovi un piatto"
         review: "Crea la tua recensione"
+        del: "Elimina il tuo ristorante"
+        rem: "Vuoi veramente cancellare il tuo caro ristorante?"

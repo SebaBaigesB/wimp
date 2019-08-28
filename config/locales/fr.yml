@@ -21,4 +21,5 @@ fr:
         remove: "Supprimer"
         conf: "Êtes-vous sûr de vouloir retirer ce plat de la liste?"
         review: "Écrire un commentaire"
-
+        del: "Supprime ton restaurant"
+        rem: "Es-tu sûr de vouloir supprimer ton restaurant?"

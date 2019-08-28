@@ -7,8 +7,8 @@ class Restaurant < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
   translates :story
-   mount_uploader :photo, PhotoUploader
-
+  mount_uploader :photo, PhotoUploader
+  validates :story, presence: true
   after_create :translates_with_api
 
   def translates_with_api

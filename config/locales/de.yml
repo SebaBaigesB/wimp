@@ -21,4 +21,5 @@ de:
         conf: "Möchten Sie dieses Gericht wirklich von der Liste entfernen?"
         remove: "Nehmen Sie eine Schüssel heraus"
         review: "Erstellen Sie Ihre Bewertung"
-
+        del: "Löschen Sie Ihr Restaurant"
+        rem: "Möchten Sie Ihr liebes Restaurant wirklich löschen?"

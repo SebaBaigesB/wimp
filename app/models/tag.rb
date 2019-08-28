@@ -6,7 +6,7 @@ class Tag < ApplicationRecord
 
   def translates_with_api
     translator = TranslateApiService.new
-    TAG::LOCALES.select { |l| l != I18n.locale }.each do |l|
+    Tag::LOCALES.select { |l| l != I18n.locale }.each do |l|
       translate_title = translator.call(text: self.title, local: I18n.locale, target: l)
       self.attributes = { title: translate_title, locale: l }
       self.save

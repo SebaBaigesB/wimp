@@ -20,3 +20,5 @@ es:
         remove: "Remove a dish"
         conf: "Usted quiere eliminar ese plato de la lista??"
         review: "Crea tu opinión"
+        del: "Eliminar tu restaurante"
+        rem: "¿De verdad quieres eliminar tu querido restaurante?"
