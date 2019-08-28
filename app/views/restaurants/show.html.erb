@@ -29,8 +29,9 @@
                 </a>
                 <div class="collapse" id="collapseExample">
                     <div class="cards ">
-                        <% @meals.each do |meal| %>
-                        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path @meal.photo, height: 300, width: 400, crop: :fill %>');">
+                        <% @restaurant.meals.each do |meal| %>
+                        <% if meal.course == 'Starter' %>
+                        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path meal.photo, height: 300, width: 400, crop: :fill %>');">
                             <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#modal-<%= meal.id %>">
                                 <%= meal.name %>
                             </button>
@@ -51,10 +52,12 @@
                                             <%= meal.description %>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn" data-dismiss="modal">Ok</button>
+                                            <% tag.each do |tag| %>
+                                            <%= tag.title %>
+                                            <% end %>
                                             <% if current_user == @restaurant.user %>
                                             <%= link_to t('.edit'), edit_restaurant_meal_path(@restaurant, meal), class: 'btn btn-primary' %>
-                                            <%= link_to t('.remove'), root_path, class: "btn btn-danger mr-5",
+                                            <%= link_to t('.remove'), restaurant_meal_path(@restaurant, meal), class: "btn btn-danger mr-5",
                                             method: :delete,
                                             data: { confirm: t('.conf') } %>
                                             <% end %>
@@ -63,6 +66,7 @@
                                 </div>
                             </div>
                         </div>
+                        <% end %>
                         <% end %>
                     </div>
                     <div class="main-course p-2">
@@ -74,7 +78,7 @@
                             <div class="cards ">
                                 <% @restaurant.meals.each do |meal| %>
                                 <% if meal.course == 'Main' %>
-                                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path @meal.photo, height: 300, width: 400, crop: :fill %>');">
+                                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path meal.photo, height: 300, width: 400, crop: :fill %>');">
                                     <button type="button" class="btn btn-ghost " data-toggle="modal" data-target="#modal-<%= meal.id %>">
                                         <%= meal.name %>
                                     </button>
@@ -91,11 +95,19 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <%= cl_image_tag @meal.photo, height: 300, width: 400, crop: :fill %>
+                                                    <%= cl_image_tag meal.photo, height: 300, width: 400, crop: :fill %>
                                                     <%= meal.description %>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn" data-dismiss="modal">Ok</button>
+                                                    <% tag.each do |tag| %>
+                                                    <%= tag.title %>
+                                                    <% end %>
+                                                    <% if current_user == @restaurant.user %>
+                                                    <%= link_to t('.edit'), edit_restaurant_meal_path(@restaurant, meal), class: 'btn btn-primary' %>
+                                                    <%= link_to t('.remove'), restaurant_meal_path(@restaurant, meal), class: "btn btn-danger mr-5",
+                                            method: :delete,
+                                            data: { confirm: t('.conf') } %>
+                                                    <% end %>
                                                 </div>
                                             </div>
                                         </div>
@@ -113,7 +125,7 @@
                                     <div class="cards ">
                                         <% @restaurant.meals.each do |meal| %>
                                         <% if meal.course == 'Dessert' %>
-                                        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path @meal.photo, height: 300, width: 400, crop: :fill %>');">
+                                        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path meal.photo, height: 300, width: 400, crop: :fill %>');">
                                             <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal3">
                                                 <%= meal.name %>
                                             </button>
@@ -130,12 +142,18 @@
                                 <span aria-hidden="true">&times;</span>
                             </button> -->
                                                         <div class="modal-body">
-                                                            <%= cl_image_tag @meal.photo, height: 300, width: 400, crop: :fill %>
+                                                            <%= cl_image_tag meal.photo, height: 300, width: 400, crop: :fill %>
                                                             <%= meal.description %>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <% tag.each do |tag| %>
                                                             <%= tag.title %>
+                                                            <% end %>
+                                                            <% if current_user == @restaurant.user %>
+                                                            <%= link_to t('.edit'), edit_restaurant_meal_path(@restaurant, meal), class: 'btn btn-primary' %>
+                                                            <%= link_to t('.remove'), restaurant_meal_path(@restaurant, meal), class: "btn btn-danger mr-5",
+                                            method: :delete,
+                                            data: { confirm: t('.conf') } %>
                                                             <% end %>
                                                         </div>
                                                     </div>
