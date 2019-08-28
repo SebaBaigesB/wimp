@@ -20,10 +20,10 @@ const addMarkersToMap = (map, markers) => {
     element.className = 'marker';
     element.style.backgroundImage = `url('${marker.image_url}')`;
     element.style.backgroundSize = 'contain';
-    element.style.width = '25px';
-    element.style.height = '25px';
+    element.style.width = '48px';
+    element.style.height = '48px';
 
-    new mapboxgl.Marker()
+    new mapboxgl.Marker(element)
       .setLngLat([ marker.lng, marker.lat ])
       .setPopup(popup)
       .addTo(map);
@@ -43,6 +43,11 @@ const initMapbox = () => {
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
+
+    map.on('click', function () {
+      map.resize();
+    });
+
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
     const geoLoc = document.getElementById('geoloc-target');
 
@@ -51,7 +56,7 @@ const initMapbox = () => {
         const lat = data.coords.latitude;
         const long = data.coords.longitude;
         console.log(lat, long);
-        map.flyTo({center: [long, lat], zoom: 15});
+        map.flyTo({center: [long, lat], zoom: 14});
       });
     });
   }
