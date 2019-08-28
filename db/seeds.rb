@@ -1,42 +1,4 @@
 
-puts "Creating user"
-user = User.create(email: 'coco@example.com', password: 'azerty', role: 'owner', nickname: 'supercoco')
-
-
-# puts "Creating restaurants"
-#   name = Faker::Restaurant.name
-#   food_style_random = rand(6)
-#   type = Restaurant.food_styles.keys[food_style_random]
-#   address = "107 cours balguerie stuttenberg 33300 bordeaux France"
-#   r = Restaurant.new(user: user, name: name, food_style: type, address: address)
-#   r.save
-  # desc = Faker::Restaurant.description
-
-puts "Creating user"
-user = User.create(email: 'xavier@example.com', password: 'azerty', nickname: 'xav')
-
-# puts "Creating restaurants"
-#   name = Faker::Restaurant.name
-#   food_style_random = rand(6)
-#   type = Restaurant.food_styles.keys[food_style_random]
-#   address = "90 Cours du Médoc 33300 Bordeaux  France"
-#   r = Restaurant.new(user: user, name: name, food_style: type, address: address)
-#   r.save
-#   # desc = Faker::Restaurant.description
-
-# puts "Creating meals"
-# 5.times do
-#   starter = Faker::Food.dish
-#   main_course = Faker::Food.vegetables
-#   dessert = Faker::Food.fruits
-#   s = Meal.new( name: starter, restaurant_id: 1)
-#   mc = Meal.new( name: main_course, restaurant_id: 1)
-#   d = Meal.new( name: dessert, restaurant_id: 1)
-#   s.save
-#   mc.save
-#   d.save
-# end
-
 puts "Creating tags"
 Tag.destroy_all
 
