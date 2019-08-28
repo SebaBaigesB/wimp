@@ -1,12 +1,14 @@
 class Meal < ApplicationRecord
   belongs_to :restaurant
-  has_many :meal_tags
+  has_many :meal_tags, dependent: :destroy
   has_many :tags, through: :meal_tags
 
-  STATUSES = ["Entry", "Main", "Dessert"]
-  validates :course, inclusion: {in: STATUSES}
+  STATUSES = ["Starter", "Main", "Dessert"]
+  validates :course, inclusion: { in: STATUSES }
 
   mount_uploader :photo, PhotoUploader
+  validates :name, presence: true
+  validates :description, presence: true
   translates :name, :description
   after_create :translates_with_api
 
