@@ -4,6 +4,8 @@ class MealsController < ApplicationController
   def new
     @restaurant = Restaurant.find_by(user: current_user, id: params[:restaurant_id])
     @tags = Tag.all
+    @allergy_tags = Tag.where(status: 0)
+    @category_tags = Tag.where(status: 1)
     @new_meal = Meal.new
   end
 
