@@ -11,6 +11,9 @@ en:
         dist: "Distance"
         allergy: "Allergy"
         choose: "Choose the food style you would like the eat"
+        create: "Create a restaurant"
+        close: "Close"
+        sub: "Submit"
     show:
         descr: "Description"
         start: "Starters"
@@ -23,3 +26,46 @@ en:
         review: "Create your review"
         del: "Delete your restaurant"
         rem: "Do you really want to delete your dear restaurant ?"
+  shared:
+      navbar:
+        menu: "Menu"
+        allergy: "Allergy"
+        lang: "- Language"
+        food: "Food style"
+        out: " Log out  "
+  devise:
+    registrations:
+        new:
+          sign: "Sign up"
+          email: "email"
+          new: "new-password"
+        edit:
+          edi: "Edit"
+          leave: "leave it blank if you don't want to change it"
+          new: "new-password"
+          need: "we need your current password to confirm your changes"
+          current: "current-password"
+          up: "Update"
+          cancel: "Cancel my account"
+          are: "Are you sure?"
+          b: "Back"
+    sessions:
+        new:
+          log: "Log in"
+          email: "email"
+          current: "current-password"
+    confirmations:
+        new:
+          resend: "Resend confirmation instructions"
+          email: "email"
+  meals:
+    edit:
+        which: "Which course"
+    new:
+        which: "Which course"
+        aller: "Allergies"
+        diet: "Diet"
+
+
+
+

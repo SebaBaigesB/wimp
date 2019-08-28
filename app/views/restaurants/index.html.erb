@@ -1,5 +1,5 @@
 <div class="restaurant">
-  <%= link_to "Create a restaurant", new_restaurant_path, class: "btn-review" %>
+  <%= link_to t('.create'), new_restaurant_path, class: "btn-review" %>
 
     <div class="stick-me awsome col-2" id="map-button">
         <i class="fas fa-arrow-alt-circle-left "></i>
@@ -35,8 +35,8 @@
                 </div>
                 <div class="modal-footer">
                     <%= f.button :submit %>
-                    <button type="button" class="btn button2" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn button2">Submit</button>
+                    <button type="button" class="btn button2" data-dismiss="modal"><%= t('.close')%></button>
+                    <button type="submit" class="btn button2"><%= t('.sub') %></button>
                 </div>
                 </fieldset>
                 <% end %>

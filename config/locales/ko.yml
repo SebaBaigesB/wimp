@@ -11,6 +11,9 @@ ko:
         dist: "거리"
         allergy: "알레르기"
         choose: "먹고 싶은 음식 스타일을 선택하십시오"
+        create: "식당 만들기"
+        close: "닫기"
+        sub: "제출"
     show:
         descr: "기술 "
         start: "초보자"
@@ -23,3 +26,42 @@ ko:
         review: "리뷰 작성"
         del: "식당 삭제"
         rem: "정말 사랑하는 식당을 삭제 하시겠습니까?"
+  shared:
+      navbar:
+        menu: "메뉴"
+        allergy: "알레르기"
+        lang: "- 언어"
+        food: "음식 스타일"
+        out: "로그 아웃"
+  devise:
+    registrations:
+        new:
+          sign: "가입"
+          email: "이메일"
+          new: "새 비밀번호"
+        edit:
+          edi: "편집하다"
+          leave: "변경하지 않으려면 비워 두십시오"
+          new: "새 비밀번호"
+          need: "변경 사항을 확인하려면 현재 비밀번호가 필요합니다"
+          current: "현재 비밀번호"
+          up: "최신 정보"
+          cancel: "내 계정 해지"
+          are: "확실해?"
+          b: "뒤로"
+    sessions:
+        new:
+          log: "로그인"
+          email: "이메일"
+          current: "현재 비밀번호"
+    confirmations:
+        new:
+          resend: "확인 지시를 다시 보내십시오"
+          email: "이메일"
+  meals:
+    edit:
+        which: "어느 코스"
+    new:
+        which: "어느 코스"
+        aller: "알레르기"
+        diet: "다이어트"

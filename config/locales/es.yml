@@ -10,6 +10,10 @@ es:
         food: "Estilo de comida"
         dist: "Distancia"
         allergi: "Alergia"
+        choose: "Elige un estilo culinario"
+        create: "Crear un restaurante"
+        close: "Cercar"
+        sub: "Validar"
     show:
         descr: "Descripción "
         start: "Primeros Platos"
@@ -22,3 +26,42 @@ es:
         review: "Crea tu opinión"
         del: "Eliminar tu restaurante"
         rem: "¿De verdad quieres eliminar tu querido restaurante?"
+        shared:
+    navbar:
+        menu: "Menú"
+        allergy: "Alergia"
+        lang: "- Idioma"
+        food: "Estilo culinario"
+        out: "Desconexión"
+  devise:
+    registrations:
+        new:
+          sign: "Registrar"
+          email: "email"
+          new: "Nueva contraseña"
+        edit:
+          edi: "Modificar"
+          leave: "Déjelo en blanco si no desea cambiarlo."
+          new: "Nueva contraseña"
+          need: "Necesitamos su contraseña actual para validar los cambios."
+          current: "Contraseña actual"
+          up: "Poner al día"
+          cancel: "Suprimir mi cuenta"
+          are: "Usted es seguro"
+          b: "Regreso"
+    sessions:
+        new:
+          log: "Registrar"
+          email: "email"
+          current: "Contraseña actual"
+    confirmations:
+        new:
+          resend: "Devuelve la confirmación"
+          email: "email"
+  meals:
+    edit:
+        which: "Que tipo de plato"
+    new:
+        which: "Que tipo de plato"
+        aller: "Alergia"
+        diet: "Regímenes alimentarios"

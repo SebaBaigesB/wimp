@@ -11,6 +11,9 @@ de:
         dist: "Entfernung"
         allergy: "Allergie"
         choose: "Wählen Sie die Art des Essens, die Sie essen möchten"
+        create: "Erstelle ein Restaurant"
+        close: "Schließen"
+        sub: "Einreichen"
     show:
         descr: "Beschreibung :"
         start: "Vorspeisen"
@@ -23,3 +26,42 @@ de:
         review: "Erstellen Sie Ihre Bewertung"
         del: "Löschen Sie Ihr Restaurant"
         rem: "Möchten Sie Ihr liebes Restaurant wirklich löschen?"
+  shared:
+    navbar:
+        menu: "Speisekarte"
+        allergy: "Allergie"
+        lang: "- Sprache"
+        food: "Essensstil"
+        out: "Ausloggen"
+  devise:
+    registrations:
+        new:
+          sign: "Anmelden"
+          email: "email"
+          new: "Neues Kennwort"
+        edit:
+          edi: "Bearbeiten"
+          leave: "Lassen Sie das Feld leer, wenn Sie es nicht ändern möchten"
+          new: "Neues Kennwort"
+          need: "Wir benötigen Ihr aktuelles Passwort, um Ihre Änderungen zu bestätigen"
+          current: "derzeitiges Passwort"
+          up: "Aktualisieren"
+          cancel: "Mein Konto kündigen"
+          are: "Bist du sicher?"
+          b: "Zurück"
+    sessions:
+        new:
+          log: "Einloggen"
+          email: "email"
+          current: "derzeitiges Passwort"
+    confirmations:
+        new:
+          resend: "Bestätigungsanweisungen erneut senden"
+          email: "email"
+  meals:
+    edit:
+        which: "Welchen Weg"
+    new:
+        which: "Welchen Weg"
+        aller: "Allergien"
+        diet: "Diät"

@@ -11,6 +11,9 @@ fr:
         dist: "Distance"
         allergy: "Allergie"
         choose: "Choisis un style culinaire"
+        create: "Créer un restaurant"
+        close: "Fermer"
+        sub: "Valider"
     show:
         descr: "Description"
         start: "Entrées"
@@ -23,3 +26,44 @@ fr:
         review: "Écrire un commentaire"
         del: "Supprime ton restaurant"
         rem: "Es-tu sûr de vouloir supprimer ton restaurant?"
+    new:
+        name: "Nom"
+  shared:
+    navbar:
+        menu: "Menu"
+        allergy: "Allergies"
+        lang: "- Langage"
+        food: "Style culinaire"
+        out: "Déconnexion"
+  devise:
+    registrations:
+        new:
+          sign: "S'enregistrer"
+          email: "email"
+          new: "Nouveau mot de passe"
+        edit:
+          edi: "Modifier"
+          leave: "Laissez vide si vous ne voulez pas le modifier"
+          new: "Nouveau mot de passe"
+          need: "Nous avons besoin de votre mot de passe actuel afin de valider les changements"
+          current: "mot de passe actuel"
+          up: "Mettre à jour"
+          cancel: "Supprimer mon compte"
+          are: "Êtes-vous sûr?"
+          b: "Retour"
+    sessions:
+        new:
+          log: "S'enregistrer"
+          email: "email"
+          current: "mot de passe actuel"
+    confirmations:
+        new:
+          resend: "Renvoyer la confirmation"
+          email: "email"
+  meals:
+    edit:
+        which: "Quel type de plat"
+    new:
+        which: "Quel type de plat"
+        aller: "Allergies"
+        diet: "Régimes alimentaires"
