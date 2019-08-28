@@ -1,5 +1,5 @@
 class Tag < ApplicationRecord
-  has_many :meal_tags
+  has_many :meal_tags, dependent: :destroy
   enum status: { allergy: 0, category: 1 }
   translates :title
   after_create :translates_with_api
