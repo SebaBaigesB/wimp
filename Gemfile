@@ -24,6 +24,7 @@ gem 'faker'
 
 gem "google-cloud-translate"
 gem 'carrierwave', '~> 1.2'
+gem 'turbolinks', '~> 5.2.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
