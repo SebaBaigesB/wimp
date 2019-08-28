@@ -13,7 +13,6 @@ initMapbox2();
 const map = document.getElementById('map');
 const mapButton = document.getElementById('map-button');
 
-
 mapButton.addEventListener('click', (e) => {
   if (map.style.display === 'none') {
     map.style.display = 'block';

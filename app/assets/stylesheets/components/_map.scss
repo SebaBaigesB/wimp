@@ -15,3 +15,14 @@
   font-size: 30px;
   color: #ccb379;
 }
+
+#map {
+  z-index: 4;
+}
+
+.mapboxgl-canvas {
+  position: absolute !important;
+  // width: 100% !important;
+  // height: 100% !important;
+}
+

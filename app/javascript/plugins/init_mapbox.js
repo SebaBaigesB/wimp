@@ -43,6 +43,11 @@ const initMapbox = () => {
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
+
+    map.on('click', function () {
+      map.resize();
+    });
+
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
     const geoLoc = document.getElementById('geoloc-target');
 
@@ -51,7 +56,7 @@ const initMapbox = () => {
         const lat = data.coords.latitude;
         const long = data.coords.longitude;
         console.log(lat, long);
-        map.flyTo({center: [long, lat], zoom: 15});
+        map.flyTo({center: [long, lat], zoom: 14});
       });
     });
   }
