@@ -1,18 +1,28 @@
-.reviews {
+
+.title-review {
+  font-size: 20px;
+  font-style: bold;
+  font-family: Parisienne;
+  list-style: none;
+  text-transform: capitalize;
+  color: black;
+  margin-right: 100px;
+}
+
+.contt-review {
+  font-size: 14px;
   list-style: none;
   color: black;
 }
 
-.title-review {
-  font-size: 24px;
-  font-style: bold;
-  font-family: Parisienne;
-  // list-style: none;
-  text-transform: capitalize;
+.card-review {
+  margin-bottom: 10px;
 }
 
-.contt-review {
-  // text-align: justify;
-  font-size: 16px;
+.reviews {
+  background-color: #faebcd;
+}
+
+.sep-review {
   list-style: none;
 }

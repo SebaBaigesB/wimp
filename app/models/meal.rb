@@ -3,7 +3,7 @@ class Meal < ApplicationRecord
   has_many :meal_tags, dependent: :destroy
   has_many :tags, through: :meal_tags
 
-  STATUSES = ["Entry", "Main", "Dessert"]
+  STATUSES = ["Starter", "Main", "Dessert"]
   validates :course, inclusion: { in: STATUSES }
 
   mount_uploader :photo, PhotoUploader
