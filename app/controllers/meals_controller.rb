@@ -41,10 +41,10 @@ class MealsController < ApplicationController
   end
 
   def destroy
-    @current_user = Meal.find(user: current_user)
+    @restaurant = Restaurant.find_by(user: current_user, id: params[:restaurant_id])
     @meal = Meal.find(params[:id])
     @meal.destroy
-    redirect_to owner_meals_path
+    redirect_to restaurant_path
   end
 
   private
