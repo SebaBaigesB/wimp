@@ -49,7 +49,9 @@
                         <!-- body -->
                         <div class="modal-body">
                             <%= cl_image_tag meal.photo, height: 300, width: 300, crop: :fill %>
+                            <br><br>
                             <%= meal.description %>
+                            <br><br>
                             <!-- tags -->
                             <div class="meals-tag">
                             <% meal.meal_tags.each do |meal_tag| %>
