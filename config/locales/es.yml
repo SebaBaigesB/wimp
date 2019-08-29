@@ -28,7 +28,12 @@ es:
         review: "Crea tu opinión"
         del: "Eliminar tu restaurante"
         rem: "¿De verdad quieres eliminar tu querido restaurante?"
-        shared:
+  new:
+        name: "Nombre"
+        pic: "Imagen"
+        address: "Dirección"
+        story: "Descripción del restaurante"
+  shared:
     navbar:
         menu: "Menú"
         allergy: "Alergia"
@@ -64,6 +69,10 @@ es:
     edit:
         which: "Que tipo de plato"
     new:
+        name: "Nombre"
+        price: "Precio"
+        desc: "Descripción del curso"
+        pic: "Imagen"
         which: "Que tipo de plato"
         aller: "Alergia"
         diet: "Regímenes alimentarios"

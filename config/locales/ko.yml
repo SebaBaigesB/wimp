@@ -1,7 +1,7 @@
 ko:
   pages:
     home:
-        create: "식당 만들기"
+        create: "식당을 온라인으로 전환"
   tags:
     index:
         allergi: "알레르기가 있나요 ?"
@@ -28,6 +28,11 @@ ko:
         review: "리뷰 작성"
         del: "식당 삭제"
         rem: "정말 사랑하는 식당을 삭제 하시겠습니까?"
+    new:
+        name: "이름"
+        pic: "그림"
+        address: "주소"
+        story: "식당 설명"
   shared:
       navbar:
         menu: "메뉴"
@@ -64,6 +69,10 @@ ko:
     edit:
         which: "어느 코스"
     new:
+        name: "이름"
+        price: "가격"
+        desc: "코스 설명"
+        pic: "그림"
         which: "어느 코스"
         aller: "알레르기"
         diet: "다이어트"

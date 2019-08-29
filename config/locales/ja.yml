@@ -1,7 +1,7 @@
 ja:
   pages:
     home:
-        create: "レストランを作る"
+        create: "レストランをオンラインにしましょう"
   tags:
     index:
         allergi: "あなたはアレルギーを持っていますか ？"
@@ -28,6 +28,11 @@ ja:
         review: "レビューを作成する"
         del: "レストランを削除する"
         rem: "親愛なるレストランを本当に削除しますか？"
+    new:
+        name: "名前"
+        pic: "写真"
+        address: "住所"
+        story: "レストランの説明"
   shared:
     navbar:
         menu: "メニュー"
@@ -64,6 +69,10 @@ ja:
     edit:
         which: "どのコース"
     new:
+        name: "名前"
+        price: "値段"
+        desc: "コースの説明"
+        pic: "写真"
         which: "どのコース"
         aller: "アレルギー"
         diet: "ダイエット"

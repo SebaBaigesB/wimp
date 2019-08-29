@@ -1,7 +1,7 @@
 en:
   pages:
     home:
-        create: "Create a restaurant"
+        create: "Pon tu restaurante en línea"
   tags:
     index:
         allergi: "Do you have any allergies ?"
@@ -29,6 +29,11 @@ en:
         editresto: "Edit Restaurant"
         del: "Delete your restaurant"
         rem: "Do you really want to delete your dear restaurant ?"
+    new:
+        name: "Name"
+        pic: "Picture"
+        address: "Address"
+        story: "Description of the restaurant"
   shared:
       navbar:
         menu: "Menu"
@@ -65,6 +70,10 @@ en:
     edit:
         which: "Which course"
     new:
+        name: "Name"
+        price: "Price"
+        desc: "Course description"
+        pic: "Picture"
         which: "Which course"
         aller: "Allergies"
         diet: "Diet"
