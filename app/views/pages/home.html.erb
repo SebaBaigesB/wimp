@@ -56,5 +56,8 @@
         <div class="def-wimp">
             <p>* See all restaurants informations in your language *</p>
         </div>
+      <% if user_signed_in? %>
+        <%= link_to "Create a restaurant", new_restaurant_path, class: "btn-review" %>
+      <% end %>
     </div>
 </div>
