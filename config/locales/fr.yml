@@ -1,4 +1,7 @@
 fr:
+  pages:
+    home:
+        create: "Créer un restaurant"
   tags:
     index:
         allergi: "Avez-vous des allergies ?"
@@ -11,7 +14,6 @@ fr:
         dist: "Distance"
         allergy: "Allergie"
         choose: "Choisis un style culinaire"
-        create: "Créer un restaurant"
         close: "Fermer"
         sub: "Valider"
     show:

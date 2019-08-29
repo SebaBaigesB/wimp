@@ -1,6 +1,4 @@
 <div class="restaurant">
-  <%= link_to t('.create'), new_restaurant_path, class: "btn-review" %>
-
     <div class="stick-me awsome col-2" id="map-button">
         <i class="fas fa-arrow-alt-circle-left "></i>
         <p>Map</p>
@@ -45,13 +43,14 @@
     </div>
 </div>
 <% @restaurants.each do |restaurant| %>
-<div class="rows d-flex" id="rest">
-    <div class="col-sm card-trip">
+  <div class="rows d-flex" id="rest">
+    <%= link_to restaurant_path(restaurant) do %>
+      <div class="col-sm card-trip">
         <%= cl_image_tag restaurant.photo, height: 300, width: 400, crop: :fill %>
         <div class="card-trip-infos">
             <div>
                 <div class="name text-center">
-                    <%= link_to restaurant.name, restaurant_path(restaurant) %>
+                    <%= restaurant.name %>
                 </div>
                 <div class="style text-center">
                     <%= restaurant.food_style %>
@@ -60,12 +59,13 @@
                     <%= restaurant.address %>
                 </div>
             </div>
-            <h2 class="card-trip-pricing">150m</h2>
+            <h2 class="card-trip-pricing"></h2>
         </div>
-    </div>
+      </div>
+    <% end %>
   </div>
-</div>
 <% end %>
+
 <div id="map" style="width: 100vw; height: 100vh;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   <i class="fas fa-crosshairs" id="geoloc-target"></i>
 </div>

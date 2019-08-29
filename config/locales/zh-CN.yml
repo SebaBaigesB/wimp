@@ -1,4 +1,7 @@
 zh-CN:
+  pages:
+    home:
+        create: "创建一个餐厅"
   tags:
     index:
         allergi: "你对什么过敏吗 ？"
@@ -11,7 +14,6 @@ zh-CN:
         dist: "距离"
         allergy: "过敏"
         choose: "选择您想吃的食物风格"
-        create: "创建一个餐厅"
         close: "关"
         sub: "提交"
     show:

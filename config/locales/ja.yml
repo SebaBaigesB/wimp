@@ -1,4 +1,7 @@
 ja:
+  pages:
+    home:
+        create: "レストランを作る"
   tags:
     index:
         allergi: "あなたはアレルギーを持っていますか ？"
@@ -11,7 +14,6 @@ ja:
         dist: "距離"
         allergy: "アレルギー"
         choose: "食べたい食べ物のスタイルを選択してください"
-        create: "レストランを作る"
         close: "閉じる"
         sub: "提出する"
     show:

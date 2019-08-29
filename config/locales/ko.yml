@@ -1,4 +1,7 @@
 ko:
+  pages:
+    home:
+        create: "식당 만들기"
   tags:
     index:
         allergi: "알레르기가 있나요 ?"
@@ -11,7 +14,6 @@ ko:
         dist: "거리"
         allergy: "알레르기"
         choose: "먹고 싶은 음식 스타일을 선택하십시오"
-        create: "식당 만들기"
         close: "닫기"
         sub: "제출"
     show:

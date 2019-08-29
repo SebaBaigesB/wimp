@@ -1,4 +1,7 @@
 de:
+  pages:
+    home:
+        create: "Erstelle ein Restaurant"
   tags:
     index:
         allergi: "Hast du irgendwelche Allergien ?"
@@ -11,7 +14,6 @@ de:
         dist: "Entfernung"
         allergy: "Allergie"
         choose: "Wählen Sie die Art des Essens, die Sie essen möchten"
-        create: "Erstelle ein Restaurant"
         close: "Schließen"
         sub: "Einreichen"
     show:
