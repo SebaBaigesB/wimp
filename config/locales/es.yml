@@ -1,7 +1,7 @@
 es:
   pages:
     home:
-        create: "Crear un restaurante"
+        create: "Pon tu restaurante en línea"
   tags:
     index:
         allergi: "Usted tiene alergias ?"
