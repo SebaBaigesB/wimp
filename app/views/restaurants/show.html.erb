@@ -106,9 +106,9 @@
                                 </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
-                                </button>                                
+                                </button>
                             </div>
-            
+
                             <!-- body -->
                             <div class="modal-body">
                                 <%= cl_image_tag meal.photo, height: 300, width: 400, crop: :fill %>
@@ -197,7 +197,7 @@
                   </div>
               </div>
  <!-- map -->
-<div id="map2" style="width: 100%;height: 150px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+<div id="map2" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
   <br>
 <!-- reviews -->
