@@ -5,31 +5,31 @@
   <%= f.input :price, as: :float %>
   <%= f.input :description %>
   <%= f.input :course, collection: Meal::STATUSES, prompt: t('.which') %>
-  <%= f.input :photo %>
+  <%= f.input :photo , class:"text-center"%>
   <%= f.input :photo_cache, as: :hidden %>
 
 
-  <fieldset class="form-group check_boxes optional meal_tags">
+<fieldset class="form-group check_boxes optional meal_tags">
 
-  <div class="funky">
-      <div class="funky-warning">
-        <div class="row">
-          <div class="col-6">
-            <legend class="col-form-label pt-0"><%= t('.aller')%></legend><input type="hidden" name="meal[tag_ids][]" value="">
-            <% @allergy_tags.each do |tag| %>
-            <div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="<%= tag.id %>" name="meal[tag_ids][]" id="meal_tag_ids_<%= tag.id %>"><label class="collection_check_boxes" for="meal_tag_ids_<%= tag.id %>"><%=tag.title%></label></div>
-            <%  end %>
-              </div>
-              <div class="col-6">
-                <legend class="col-form-label pt-0"><%= t('.diet')%></legend><input type="hidden" name="meal[tag_ids][]" value="">
-            <% @category_tags.each do |tag| %>
-            <div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="<%= tag.id %>" name="meal[tag_ids][]" id="meal_tag_ids_<%= tag.id %>"><label class="collection_check_boxes" for="meal_tag_ids_<%= tag.id %>"><%=tag.title%></label></div>
-            <%  end %>
-        </div>
+<div class="funky">
+  <div class="funky-warning">
+    <div class="row">
+      <div class="col-6">
+        <legend class="ttle-tag text-center"><%= t('.aller')%></legend><input type="hidden" name="meal[tag_ids][]" value="">
+        <% @allergy_tags.each do |tag| %>
+        <div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="<%= tag.id %>" name="meal[tag_ids][]" id="meal_tag_ids_<%= tag.id %>"><label class="collection_check_boxes" for="meal_tag_ids_<%= tag.id %>"><%=tag.title%></label></div>
+        <%  end %>
       </div>
+      <div class="col-6">
+        <legend class="ttle-tag text-center"><%= t('.diet')%></legend><input type="hidden" name="meal[tag_ids][]" value="">
+        <% @category_tags.each do |tag| %>
+        <div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="<%= tag.id %>" name="meal[tag_ids][]" id="meal_tag_ids_<%= tag.id %>"><label class="collection_check_boxes" for="meal_tag_ids_<%= tag.id %>"><%=tag.title%></label></div>
+        <%  end %>
+      </div>
+     </div>
     </div>
   </div>
 </div>
-</fieldset>
+  </fieldset>
 <%= f.submit class: "btn btn-review"%>
 <% end %>
