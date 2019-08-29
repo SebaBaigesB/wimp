@@ -66,7 +66,7 @@
   </div>
 <% end %>
 
-<div id="map" style="width: 100vw; height: 100vh;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+<div id="map" class="d-none" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   <i class="fas fa-crosshairs" id="geoloc-target"></i>
 </div>
 
