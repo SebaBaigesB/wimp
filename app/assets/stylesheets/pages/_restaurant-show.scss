@@ -24,30 +24,6 @@
   text-align: center;
 }
 
-
-
-.modal-title {
-  font-size: 24px;
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  font-family: Parisienne;
-
-}
-
-.modal-body {
-  font-size: 16px;
-  text-align: center;
-  color: black;
-  text-decoration: none;
-}
-
-.modal-body img {
-  width: 326px;
-  margin-left: auto;
-  border-radius: 8px;
-}
-
 #map {
   z-index: 2;
   position: fixed;
@@ -56,18 +32,57 @@
   transition:.2s;
 }
 
-.allergy {
-font-size: 16px;
+
+// MODALS
+.modal-title {
+  font-size: 24px;
   text-align: center;
+  color: black;
+  text-decoration: none;
+  font-family: Parisienne;
+  display: flex;
+  justify-content: auto;
+}
+
+.modal-body {
+  font-size: 16px;
+  text-align: justify;
   color: black;
   text-decoration: none;
 }
 
-.pref {
+.modal-body img {
+  width: 325px;
+  height: auto;
+  border-radius: 8px;
+}
 
+<<<<<<< modals
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
 
+// MEALS TAGS
+.meals-tag {
+// display: flex;
+// justify-content: space-between;
+=======
+#map2 {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  display: none;
+  transition:.2s;
+>>>>>>> master
+}
+
+.allergy {
   font-size: 16px;
-  text-align: center;
-  color: green;
-  text-decoration: none;
+  color: #ccb379;
+}
+
+.pref {
+  font-size: 16px;
+  color: #ccb379;
 }
