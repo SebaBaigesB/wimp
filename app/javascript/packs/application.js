@@ -17,13 +17,3 @@ mapButton.addEventListener('click', (e) => {
   map.classList.toggle("d-none");
   initMapbox();
 })
-
-
-
-
-// map.addControl(new mapboxgl.GeolocateControl({
-//     postionOptions: {
-//       enablehighAccuracy: true
-//     },
-//     trackUserLocation: true
-//   }));
