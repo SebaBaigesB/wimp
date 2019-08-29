@@ -1,7 +1,7 @@
 de:
   pages:
     home:
-        create: "Erstelle ein Restaurant"
+        create: "Stellen Sie Ihr Restaurant online"
   tags:
     index:
         allergi: "Hast du irgendwelche Allergien ?"
@@ -29,6 +29,11 @@ de:
         editresto: "Restaurant bearbeiten"
         del: "Löschen Sie Ihr Restaurant"
         rem: "Möchten Sie Ihr liebes Restaurant wirklich löschen?"
+    new:
+        name: "Name"
+        pic: "Bild"
+        address: "Adresse"
+        story: "Beschreibung des Restaurants"
   shared:
     navbar:
         menu: "Speisekarte"
@@ -65,6 +70,10 @@ de:
     edit:
         which: "Welchen Weg"
     new:
+        name: "Name"
+        price: "Preis"
+        desc: "Kursbeschreibung"
+        pic: "Bild"
         which: "Welchen Weg"
         aller: "Allergien"
         diet: "Diät"

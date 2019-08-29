@@ -1,7 +1,7 @@
 fr:
   pages:
     home:
-        create: "Créer un restaurant"
+        create: "Mettez en ligne votre restaurant"
   tags:
     index:
         allergi: "Avez-vous des allergies ?"
@@ -31,6 +31,9 @@ fr:
         rem: "Etes-vous sûr de vouloir supprimer votre restaurant?"
     new:
         name: "Nom"
+        pic: "Photo"
+        address: "Adresse"
+        story: "Description du restaurant"
   shared:
     navbar:
         menu: "Menu"
@@ -67,6 +70,10 @@ fr:
     edit:
         which: "Quel type de plat"
     new:
+        name: "Nom"
+        price: "Prix"
+        desc: "Description du plat"
+        pic: "Photo"
         which: "Quel type de plat"
         aller: "Allergies"
         diet: "Régimes alimentaires"

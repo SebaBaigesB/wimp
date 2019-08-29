@@ -1,7 +1,7 @@
 zh-CN:
   pages:
     home:
-        create: "创建一个餐厅"
+        create: "把你的餐厅放在网上"
   tags:
     index:
         allergi: "你对什么过敏吗 ？"
@@ -29,6 +29,11 @@ zh-CN:
         editresto: "编辑餐厅"
         del: "删除你的餐馆"
         rem: "你真的想删除亲爱的餐馆吗？"
+    new:
+        name: "名称"
+        pic: "图片"
+        address: "地址"
+        story: "餐厅的描述"
   shared:
       navbar:
         menu: "菜单"
@@ -65,6 +70,10 @@ zh-CN:
     edit:
         which: "哪个课程"
     new:
+        name: "名称"
+        price: "Price"
+        desc: "课程描述"
+        pic: "图片"
         which: "哪个课程"
         aller: "过敏"
         diet: "饮食"

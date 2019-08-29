@@ -6,7 +6,20 @@
   <%= f.input :food_style, collection: Restaurant.food_styles.keys %>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
+  <%= simple_form_for @restaurant do |f| %>
+    <div class="container-fluid">
+    <%= f.input :name, label: t('.name') %>
+    <%= f.input :address, label: t('.address') %>
+    <%= f.input :story, label: t('.story') %>
+    <%= f.input :food_style, collection: Restaurant.food_styles.keys %>
+    <label class="w-100" id="upload-label">
+    <div class="btn-review"><%= t('.pic')%></div>
+    <span class="d-none">
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+    </span>
+  </label>
+    </div>
+    <%= f.submit class: "btn-review"%>
+  <% end %>
 
-  </div>
-  <%= f.submit class: "btn-review"%>
-<% end %>
