@@ -70,8 +70,17 @@ ActiveRecord::Schema.define(version: 2019_08_26_165634) do
     t.index ["user_id"], name: "index_restaurants_on_user_id"
   end
 
-  create_table "reviews", force: :cascade do |t|
+  create_table "review_translations", force: :cascade do |t|
+    t.bigint "review_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.text "content"
+    t.index ["locale"], name: "index_review_translations_on_locale"
+    t.index ["review_id"], name: "index_review_translations_on_review_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
     t.bigint "restaurant_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false

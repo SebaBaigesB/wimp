@@ -57,6 +57,7 @@
   border-radius: 8px;
 }
 
+<<<<<<< modals
 .modal-footer {
   display: flex;
   justify-content: space-between;
@@ -66,6 +67,14 @@
 .meals-tag {
 // display: flex;
 // justify-content: space-between;
+=======
+#map2 {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  display: none;
+  transition:.2s;
+>>>>>>> master
 }
 
 .allergy {

@@ -13,11 +13,17 @@
   top: 18px;
   left: 8px;
   font-size: 30px;
-  color: #ccb379;
+  color: black;
 }
 
 #map {
-  z-index: 4;
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  // display: none;
+  transition:.2s;
 }
 
 .mapboxgl-canvas {

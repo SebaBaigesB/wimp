@@ -44,9 +44,9 @@ const initMapbox = () => {
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
 
-    map.on('click', function () {
-      map.resize();
-    });
+    // map.on('click', function () {
+    //   map.resize();
+    // });
 
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
     const geoLoc = document.getElementById('geoloc-target');

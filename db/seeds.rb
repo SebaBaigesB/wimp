@@ -1,6 +1,12 @@
 
-puts "Creating tags"
+puts "Destroying tags"
 Tag.destroy_all
+puts "Destroying restaurants"
+Restaurant.destroy_all
+puts "Destroying meals"
+Meal.destroy_all
+
+puts 'destroy done, now creating...'
 
 Tag.create!(title: "Tree nut", status: 0)
 Tag.create!(title: "Peanut", status: 0)
