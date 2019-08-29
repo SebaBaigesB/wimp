@@ -26,6 +26,7 @@ de:
         conf: "Möchten Sie dieses Gericht wirklich von der Liste entfernen?"
         remove: "Nehmen Sie eine Schüssel heraus"
         review: "Erstellen Sie Ihre Bewertung"
+        editresto: "Restaurant bearbeiten"
         del: "Löschen Sie Ihr Restaurant"
         rem: "Möchten Sie Ihr liebes Restaurant wirklich löschen?"
   shared:
