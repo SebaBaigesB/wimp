@@ -2,26 +2,23 @@
   <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "logo_.png", alt: "logo" %>
   <% end %>
-  <% if user_signed_in? %>
-  <% else %>
-  <%= link_to "Login", new_user_session_path, class: "nav-link btn-chief" %>
-  <% end %>
+
+  <%= image_tag ApplicationRecord::FLAGS[I18n.locale], alt: "locale", width: 40 %>
+
 
   <% if user_signed_in? %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="menu"> <%= t('.menu') %></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="menu"> <%= t('.menu') %></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
         <% if current_page?(restaurants_path) %>
           <li>- <a class="nav-item" type="button" data-toggle="modal" data-target="#FoodModal" class="tab-underlined" id="food"><%=t('.food')%></a>
           </li>
           <li>- <a href="tags" class="nav-item ">
             <%= t('.allergy') %></a>
           </li>
-        <% end %>
-        <% if current_page?(root_path) %>
-        <% else %>
+        <% elsif !current_page?(root_path) %>
           <li class="nav-item">
             <%= link_to t('.lang'), root_path, class: "nav-item" %>
           </li>
@@ -29,7 +26,9 @@
         <li class="nav-item">
           <%= link_to t('.out'), destroy_user_session_path, method: :delete %>
         </li>
-        <% end %>
-    </ul>
-  </div>
+      </ul>
+    </div>
+  <% else %>
+  <%= link_to "Login", new_user_session_path, class: "nav-link btn-chief" %>
+  <% end %>
 </div>

@@ -4,7 +4,7 @@
   <%= f.input :name, label: t('.name')%>
   <%= f.input :price, as: :float, label: t('.price') %>
   <%= f.input :description, label:  t('.desc')%>
-  <%= f.input :course, collection: Meal::STATUSES, prompt: t('.which') %>
+  <%= f.input :course, collection: Meal::STATUSES.map{ |status| [t(".#{status.downcase}"), status]}, prompt: t('.which') %>
   <label class="w-100" id="upload-label">
     <div class="btn-review"><%= t('.pic')%></div>
     <span class="d-none">
