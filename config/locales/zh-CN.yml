@@ -26,6 +26,7 @@ zh-CN:
         conf: "你真的想从列表中删除那道菜吗？"
         remove: "取出一道菜"
         review: "创建您的评论"
+        editresto: "编辑餐厅"
         del: "删除你的餐馆"
         rem: "你真的想删除亲爱的餐馆吗？"
     new:

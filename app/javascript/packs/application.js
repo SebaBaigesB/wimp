@@ -13,6 +13,7 @@ initMapbox2();
 const map = document.getElementById('map');
 const mapButton = document.getElementById('map-button');
 
+
 if (mapButton) {
   mapButton.addEventListener('click', (e) => {
     map.classList.toggle("d-none");
@@ -27,18 +28,4 @@ document.getElementById('meal_photo').onchange = function() {
     const fileName = uploadBtn.value.split("\\")[uploadBtn.value.split("\\").length - 1];
     uploadLabel.insertAdjacentText("afterend", `${fileName}`);
 };
-      // const uploadLabel = document.querySelector("#upload-label");
-      // if (uploadLabel) {
-      //   uploadLabel.addEventListener("click", (event) => {
-      //     const uploadBtn = document.querySelector("#meal_photo");
-      //     uploadLabel.InsertAdjacentHTML("afterend", "coco")
-      //   });
-      // }
 
-
-// map.addControl(new mapboxgl.GeolocateControl({
-//     postionOptions: {
-//       enablehighAccuracy: true
-//     },
-//     trackUserLocation: true
-//   }));

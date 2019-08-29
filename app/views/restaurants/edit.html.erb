@@ -1,10 +1,11 @@
 <%= simple_form_for @restaurant do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :food_style, collection: Restaurant.food_styles.keys %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <% @tags.each do |tag| %>
-  <% end %>
+  <div class="container fluid">
+
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :food_style, collection: Restaurant.food_styles.keys %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+  </div>
   <%= f.submit class: "btn btn-review"%>
 <% end %>

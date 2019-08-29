@@ -1,7 +1,7 @@
 .toggle-container {
   position: relative;
   width: 250px;
-  // left: 20%;
+  left: 33%;
 }
 
 
@@ -13,8 +13,10 @@
 .restaurant label {
   display: block;
   position: relative;
-  margin: 12px;
-  padding: 11px 23px 8px 57px;
+  width: 90%;
+  font-size: 14px;
+  margin: 7px;
+  padding: 8px 0px 6px 32px;
   border-radius: 100px;
   color: #0e0000;
   background-color: #ccb379;
@@ -25,10 +27,10 @@
   content: '';
   display: block;
   position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: 14px;
-  width: 23px;
+  top: 8px;
+  height: 20px;
+  left: 7px;
+  width: 20px;
   border: 1px solid black;
   border-radius: 100px;
 
