@@ -1,7 +1,9 @@
 class Review < ApplicationRecord
   belongs_to :restaurant
   belongs_to :user
-   after_create :translates_with_api
+  translates :content
+  validates :content, presence: true
+  after_create :translates_with_api
 
   def translates_with_api
     translator = TranslateApiService.new
