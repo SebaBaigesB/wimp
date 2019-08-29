@@ -65,3 +65,6 @@ de:
         which: "Welchen Weg"
         aller: "Allergien"
         diet: "Diät"
+  reviews:
+    new:
+       b: "Zurück"

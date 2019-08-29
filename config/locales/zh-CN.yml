@@ -65,3 +65,6 @@ zh-CN:
         which: "哪个课程"
         aller: "过敏"
         diet: "饮食"
+  reviews:
+    new:
+       b: "背部"

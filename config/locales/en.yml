@@ -65,6 +65,9 @@ en:
         which: "Which course"
         aller: "Allergies"
         diet: "Diet"
+  reviews:
+    new:
+       b: "Back"
 
 
 

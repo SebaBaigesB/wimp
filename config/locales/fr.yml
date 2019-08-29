@@ -67,3 +67,6 @@ fr:
         which: "Quel type de plat"
         aller: "Allergies"
         diet: "Régimes alimentaires"
+  reviews:
+    new:
+       b: "Retour"

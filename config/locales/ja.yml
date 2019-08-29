@@ -65,4 +65,7 @@ ja:
         which: "どのコース"
         aller: "アレルギー"
         diet: "ダイエット"
+  reviews:
+    new:
+       b: "バック"
 

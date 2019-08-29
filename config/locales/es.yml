@@ -65,3 +65,6 @@ es:
         which: "Que tipo de plato"
         aller: "Alergia"
         diet: "Regímenes alimentarios"
+  reviews:
+    new:
+       b: "Regreso"

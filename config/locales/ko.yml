@@ -65,3 +65,6 @@ ko:
         which: "어느 코스"
         aller: "알레르기"
         diet: "다이어트"
+  reviews:
+    new:
+       b: "뒤로"
