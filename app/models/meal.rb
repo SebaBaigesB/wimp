@@ -6,7 +6,7 @@ class Meal < ApplicationRecord
   STATUSES = ["Starter", "Main", "Dessert"]
   validates :course, inclusion: { in: STATUSES }
 
-  mount_uploader :photo, PhotoUploader
+  mount_uploader :photo, PhotoUploader, optional: true
   validates :name, presence: true
   validates :description, presence: true
   translates :name, :description
