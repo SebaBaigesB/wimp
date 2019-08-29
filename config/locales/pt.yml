@@ -21,5 +21,6 @@ pt:
         conf: "Você realmente quer remover esse prato da lista?"
         remove: "Suprimir um prato"
         review: "Criar uma revisão"
+        editresto: "editar restaurante"
         del: "Excluir seu restaurante"
         rem: "Você realmente quer deletar seu querido restaurante?"

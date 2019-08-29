@@ -24,6 +24,7 @@
   text-align: center;
 }
 
+
 // MAPS
 #map {
   z-index: 2;
@@ -40,7 +41,6 @@
   display: none;
   transition:.2s;
 }
-
 
 // MODALS
 .modal-title {
@@ -66,16 +66,13 @@
   border-radius: 8px;
 }
 
-
 .modal-footer {
   display: flex;
   justify-content: space-between;
 }
 
+
 // MEALS TAGS
-
-
-
 .allergy {
   font-size: 16px;
   color: #ccb379;
