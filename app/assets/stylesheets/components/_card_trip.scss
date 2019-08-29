@@ -1,57 +1,35 @@
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 5px 0;
+  text-align: center;
 }
 
 .card-trip > img {
+  // padding: 5px 0;
   height: 140px;
   width: 100%;
   object-fit: cover;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-trip p {
-
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-
-.card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
-
-.card-trip .name {
+// DESCRIPTION
+ .name {
   font-family: Playfair Display;
   text-decoration: underline;
+  font-weight: bold
 }
 
-.card-trip .style {
+.style {
   font-family: Parisienne;
   font-size: 18px;
 }
 
-.card-trip .address {
+ .address {
   font-family: Playfair Display;
   font-size: 14px;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
+
 
