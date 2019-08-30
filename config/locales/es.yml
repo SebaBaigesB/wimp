@@ -16,6 +16,13 @@ es:
         choose: "Elige un estilo culinario"
         close: "Cercar"
         sub: "Validar"
+        french: "Francés"
+        italian: "Italiano"
+        japanese: "Japonés"
+        chinese: "Chino"
+        pubs: "Pubs"
+        others: "Otros"
+
     show:
         descr: "Descripción "
         start: "Primeros Platos"

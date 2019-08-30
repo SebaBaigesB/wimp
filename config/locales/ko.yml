@@ -16,6 +16,12 @@ ko:
         choose: "먹고 싶은 음식 스타일을 선택하십시오"
         close: "닫기"
         sub: "제출"
+        french: "프랑스 국민"
+        italian: "이탈리아 사람"
+        japanese: "일본어"
+        chinese: "중국말"
+        pubs: "술집"
+        others: "다른 사람"
     show:
         descr: "기술 "
         start: "초보자"
