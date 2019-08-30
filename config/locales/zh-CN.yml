@@ -16,6 +16,12 @@ zh-CN:
         choose: "选择您想吃的食物风格"
         close: "关"
         sub: "提交"
+        french: "法国"
+        italian: "意大利"
+        japanese: "日本"
+        chinese: "中文"
+        pubs: "酒吧"
+        others: "其他"
     show:
         descr: "描述 :"
         start: "首发"

@@ -16,6 +16,12 @@ de:
         choose: "Wählen Sie die Art des Essens, die Sie essen möchten"
         close: "Schließen"
         sub: "Einreichen"
+        french: "Französisch"
+        italian: "Italienisch"
+        japanese: "japanisch"
+        chinese: "Chinesisch"
+        pubs: "Pubs"
+        others: "Andere"
     show:
         descr: "Beschreibung :"
         start: "Vorspeisen"

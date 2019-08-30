@@ -16,6 +16,12 @@ en:
         choose: "Choose the food style you would like the eat"
         close: "Close"
         sub: "Submit"
+        french: "French"
+        italian: "Italian"
+        japanese: "Japanese"
+        chinese: "Chinese"
+        pubs: "Pubs"
+        others: "Others"
     show:
         descr: "Description"
         start: "Starters"

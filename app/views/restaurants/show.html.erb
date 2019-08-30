@@ -32,7 +32,7 @@
               <% if meal.photo.present? %>
                 <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('<%= cl_image_path meal.photo, height: 300, width: 400, crop: :fill %>');">
               <% else %>
-                <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(<%= 'https://unsplash.com/photos/1ZTccDpF71k' %>);">
+                <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(<%= image_path "default_meal.png" %>);">
               <% end %>
                   <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#modal-<%= meal.id %>">
                       <%= meal.name %>
@@ -92,13 +92,11 @@
           <div class="collapse" id="collapseExample2">
               <div class="cards ">
                   <% @restaurant.meals.each do |meal| %>
-                  <% meal.photo.present? ? photo = meal.photo : photo = "https://res.cloudinary.com/dpwkvcnqo/image/upload/v1567096598/q7olekcinpabn0mouo8v.jpg" %>
                   <% if meal.course == 'Main' %>
-
                   <% if meal.photo.present? %>
                     <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('<%= cl_image_path meal.photo, height: 300, width: 400, crop: :fill %>');">
                   <% else %>
-                    <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(<%= 'https://unsplash.com/photos/1ZTccDpF71k' %>);">
+                    <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(<%= image_path "default_meal.png" %>);">
                   <% end %>
                       <button type="button" class="btn btn-ghost " data-toggle="modal" data-target="#modal-<%= meal.id %>">
                           <%= meal.name %>
@@ -166,11 +164,12 @@
                       <% if meal.photo.present? %>
                         <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('<%= cl_image_path meal.photo, height: 300, width: 400, crop: :fill %>');">
                       <% else %>
-                        <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(<%= 'https://unsplash.com/photos/1ZTccDpF71k' %>);">
+                        <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(<%= image_path "default_meal.png" %>);">
                       <% end %>
                         <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal3">
                             <%= meal.name %>
                         </button>
+                      </div>
                         <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -180,6 +179,9 @@
                                       <%= meal.name %> -
                                       <%= meal.price %> €
                                   </h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                               </div>
                               <!-- body -->
                               <div class="modal-body">
@@ -213,6 +215,7 @@
                   </div>
               </div>
             </div>
+            <br>
  <!-- map -->
 <div id="map2" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>

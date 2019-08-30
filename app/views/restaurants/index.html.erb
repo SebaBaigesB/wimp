@@ -26,7 +26,7 @@
                             <div class="form-check form-check-inline box-size">
                                 <input type="checkbox" value="<%= food_style %>" name="restaurants_index[restaurants][]" id="restaurants_index_restaurants_<%= food_style %>" />
                                 <label class="collection_check_boxes" for="restaurants_index_restaurants_<%= food_style %>">
-                                    <%= food_style %></label>
+                                    <%= t(".#{food_style.downcase}") %></label>
                             </div>
                             <% end %>
                     </div>

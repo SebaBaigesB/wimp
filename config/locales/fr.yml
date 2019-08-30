@@ -16,6 +16,12 @@ fr:
         choose: "Choisissez un style culinaire"
         close: "Fermer"
         sub: "Valider"
+        french: "Français"
+        italian: "Italien"
+        japanese: "Japonais"
+        chinese: "Chinois"
+        pubs: "Bistro"
+        others: "Autres"
     show:
         descr: "Description"
         start: "Entrées"

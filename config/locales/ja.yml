@@ -16,6 +16,12 @@ ja:
         choose: "食べたい食べ物のスタイルを選択してください"
         close: "閉じる"
         sub: "提出する"
+        french: "フランス"
+        italian: "イタリア"
+        japanese: "日本"
+        chinese: "中国"
+        pubs: "パブ"
+        others: "その他"
     show:
         descr: "説明 "
         start: "スターター"
