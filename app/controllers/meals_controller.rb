@@ -46,7 +46,7 @@ class MealsController < ApplicationController
     @restaurant = Restaurant.find_by(user: current_user, id: params[:restaurant_id])
     @meal = Meal.find(params[:id])
     @meal.destroy
-    redirect_to restaurant_path
+    redirect_to restaurant_path(@restaurant)
   end
 
   private
