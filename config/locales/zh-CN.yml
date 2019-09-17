@@ -35,6 +35,8 @@ zh-CN:
         editresto: "编辑餐厅"
         del: "删除你的餐馆"
         rem: "你真的想删除亲爱的餐馆吗？"
+        editcomment: "编辑"
+        removecomment: "删除"
     new:
         name: "名称"
         pic: "图片"

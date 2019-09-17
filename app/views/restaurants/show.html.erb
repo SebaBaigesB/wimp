@@ -229,11 +229,23 @@
 <%= link_to t('.review'), new_restaurant_review_path(@restaurant.id), class: "btn btn-review" %>
 <ul class="reviews">
   <% @restaurant.reviews.each do |review| %>
-    <div class="card-review">
-      <li class="title-review"><%= review.user.nickname %></li>
-      <li class="contt-review"><%= review.content %></li>
-      <li class="sep-review">-------------------------------------</li>
-    </div>
+  <div class="card-review">
+    <li class="title-review"><%= review.user.nickname %></li>
+    <li class="contt-review"><%= review.content %></li>
+    <% if current_user == review.user %>
+      <div class="d-flex rows">
+        <div class="col-5 pl-8">
+          <%= link_to t('.editcomment'), edit_restaurant_review_path(@restaurant, review), class: "btn btn-review" %>
+        </div>
+        <div class="col-5 pl-8">
+          <%= link_to t('.removecomment'), restaurant_review_path(@restaurant, review), class: "btn btn-review",
+              method: :delete,
+              data: { confirm: t('.conf') } %>
+        </div>
+      </div>
+    <% end %>
+    <li class="sep-review">-------------------------------------</li>
+  </div>
   <% end %>
 </ul>
 <br>

@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+
   def new
     @restaurant = Restaurant.find(params["restaurant_id"])
     @review = Review.new
@@ -17,7 +18,7 @@ class ReviewsController < ApplicationController
   end
 
   def edit
-    @restaurant = Restaurant.find_by(user: current_user, id: params[:restaurant_id])
+    @restaurant = Restaurant.find(params["restaurant_id"])
     @review = Review.find(params[:id])
   end
 

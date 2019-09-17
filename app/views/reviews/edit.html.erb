@@ -1,0 +1,13 @@
+<div class="form min-vh-100">
+  <div class = "col-sm-6">
+    <h2>Write your review</h2>
+    <%= simple_form_for [@restaurant, @review] do |f| %>
+    <div class="form-inputs">
+      <%= f.input :content %>
+    </div>
+    <div class="choice-btn">
+      <%= f.button :submit, class: "btn btn-review" %>
+      <%= link_to t('.b'), restaurants_path, class: "btn btn-delete" %>
+    <% end %>
+  </div>
+</div>

@@ -35,6 +35,8 @@ de:
         editresto: "Restaurant bearbeiten"
         del: "Löschen Sie Ihr Restaurant"
         rem: "Möchten Sie Ihr liebes Restaurant wirklich löschen?"
+        editcomment: "Bearbeiten"
+        removecomment: "Löschen"
     new:
         name: "Name"
         pic: "Bild"

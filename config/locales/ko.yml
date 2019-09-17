@@ -35,6 +35,8 @@ ko:
         editresto: "식당 편집"
         del: "식당 삭제"
         rem: "정말 사랑하는 식당을 삭제 하시겠습니까?"
+        editcomment: "편집하다"
+        removecomment: "지우다"
     new:
         name: "이름"
         pic: "그림"

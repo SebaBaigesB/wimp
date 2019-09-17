@@ -24,3 +24,5 @@ pt:
         editresto: "editar restaurante"
         del: "Excluir seu restaurante"
         rem: "Você realmente quer deletar seu querido restaurante?"
+        editcomment: "Editar"
+        removecomment: "Excluir"

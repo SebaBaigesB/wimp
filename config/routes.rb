@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /fr|es|de|it|zh-CN|ja|pt|ko|el|ru|th/ do
 
     resources :restaurants, only: [:index, :show, :new, :create, :edit, :update] do
-      resources :reviews, only: [:new, :create]
+      resources :reviews, only: [:new, :create, :edit, :update, :destroy]
       resources :meals, only: [:index, :show, :new, :create, :edit, :update, :destroy ] do
 
         resources :meal_tags
