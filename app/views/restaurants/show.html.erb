@@ -219,22 +219,24 @@
  <!-- map -->
 <div id="map2" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-  <br>
-<!-- reviews -->
-  <%= link_to t('.review'), new_restaurant_review_path(@restaurant.id), class: "btn btn-review" %>
-    <ul class="reviews">
-      <% @restaurant.reviews.each do |review| %>
-      <div class="card-review">
-      <li class="title-review"><%= review.user.nickname %></li>
-      <li class="contt-review"><%= review.content %></li>
-      <li class="sep-review">-------------------------------------</li>
-      </div>
-      <% end %>
-    </ul>
-
-</div>
-
 <br>
+
+<!-- reviews -->
+<%= link_to t('.review'), new_restaurant_review_path(@restaurant.id), class: "btn btn-review" %>
+<ul class="reviews">
+  <% @restaurant.reviews.each do |review| %>
+  <div class="card-review">
+    <li class="title-review"><%= review.user.nickname %></li>
+    <li class="contt-review"><%= review.content %></li>
+    <% if current_user == review.user %>
+      <%= link_to "edit", edit_restaurant_review_path(@restaurant, review), class: "btn btn-review" %>
+    <% end %>
+    <li class="sep-review">-------------------------------------</li>
+  </div>
+  <% end %>
+</ul>
+<br>
+
 <!-- delete restaurant -->
 <% if current_user == @restaurant.user %>
   <div class="d-flex">
