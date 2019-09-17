@@ -1,222 +1,225 @@
 <div class="banner" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.4),rgba(0,0,0,0.1)), url('<%= cl_image_path @restaurant.photo, height: 300, width: 400, crop: :fill %>');">
-    <div class="container">
-        <h1>
-            <%= @restaurant.name %>
-        </h1>
-    </div>
+  <div class="container">
+    <h1>
+      <%= @restaurant.name %>
+    </h1>
+  </div>
 </div>
+
 <div class="restaurant">
   <div class="description">
-      <%= link_to "X", restaurants_path, class: "btn btn-back"%>
-      <h3>
-          <%= t('.descr') %>
-      </h3>
-      <p><%= @restaurant.story %> </p>
+    <%= link_to "X", restaurants_path, class: "btn btn-back"%>
+    <h3>
+        <%= t('.descr') %>
+    </h3>
+    <p><%= @restaurant.story %> </p>
   </div>
   <% if current_user == @restaurant.user %>
-  <div class="d-flex">
+    <div class="d-flex">
       <%= link_to t('.add'), new_restaurant_meal_path(@restaurant), class: "btn btn-review" %>
-  </div>
+    </div>
   <% end %>
+</div>
 
-  <!-- menu -->
-  <div class="menu">
-    <!-- starter -->
-      <div class="starter">
-      <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-          <h1><%= t('.start') %> +</h1>
-      </a>
-      <div class="collapse" id="collapseExample">
-          <div class="cards ">
-              <% @restaurant.meals.each do |meal| %>
-              <% if meal.course == 'Starter' %>
-              <% if meal.photo.present? %>
-                <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('<%= cl_image_path meal.photo, height: 300, width: 400, crop: :fill %>');">
-              <% else %>
-                <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(<%= image_path "default_meal.png" %>);">
-              <% end %>
-                  <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#modal-<%= meal.id %>">
-                      <%= meal.name %>
-                  </button>
-                  <div class="modal fade" id="modal-<%= meal.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <!-- header -->
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">
-                                <%= meal.name %> -
-                                <%= meal.price %> €
-                            </h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <!-- body -->
-                        <div class="modal-body">
-                            <%= cl_image_tag meal.photo, height: 300, width: 300, crop: :fill %>
-                            <br><br>
-                            <%= meal.description %>
-                            <br><br>
-                            <!-- tags -->
-                            <div class="meals-tag">
-                            <% meal.meal_tags.each do |meal_tag| %>
-                            <% if meal_tag.tag.status == "allergy" %>
-                              <div class="allergy"> - <%=meal_tag.tag.title%> </div>
-                              <% else %>
-                              <div class="pref"> - <%=meal_tag.tag.title%></div>
-                              <% end %>
-                              <% end %>
-                            </div>
-                        </div>
-                        <!-- footer -->
-                        <div class="modal-footer">
-                            <% if current_user == @restaurant.user %>
-                            <%= link_to t('.edit'), edit_restaurant_meal_path(@restaurant, meal), class: 'btn-delete' %>
-                            <%= link_to t('.remove'), restaurant_meal_path(@restaurant, meal), class: "btn-review",
-                            method: :delete,
-                            data: { confirm: t('.conf') } %>
-                            <% end %>
-                        </div>
-                      </div>
+<!-- menu -->
+<div class="menu">
+  <!-- starter -->
+  <div class="starter">
+    <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <h1><%= t('.start') %> +</h1>
+    </a>
+    <div class="collapse" id="collapseExample">
+      <div class="cards ">
+        <% @restaurant.meals.each do |meal| %>
+          <% if meal.course == 'Starter' %>
+            <% if meal.photo.present? %>
+              <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('<%= cl_image_path meal.photo, height: 300, width: 400, crop: :fill %>');">
+            <% else %>
+              <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(<%= image_path "default_meal.png" %>);">
+            <% end %>
+            <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#modal-<%= meal.id %>">
+              <%= meal.name %>
+            </button></div>
+            <div class="modal fade" id="modal-<%= meal.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <!-- header -->
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      <%= meal.name %> -
+                      <%= meal.price %> €
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <!-- body -->
+                  <div class="modal-body">
+                    <%= cl_image_tag meal.photo, height: 300, width: 300, crop: :fill %>
+                    <br><br>
+                    <%= meal.description %>
+                    <br><br>
+                    <!-- tags -->
+                    <div class="meals-tag">
+                      <% meal.meal_tags.each do |meal_tag| %>
+                        <% if meal_tag.tag.status == "allergy" %>
+                          <div class="allergy"> - <%=meal_tag.tag.title%> </div>
+                        <% else %>
+                          <div class="pref"> - <%=meal_tag.tag.title%></div>
+                        <% end %>
+                      <% end %>
                     </div>
                   </div>
-              </div>
-              <% end %>
-              <% end %>
-          </div>
-      </div>
-      <!-- main course -->
-      <div class="main-course">
-          <a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
-              <h1><%= t('.main') %> +</h1>
-          </a>
-          <div class="collapse" id="collapseExample2">
-              <div class="cards ">
-                  <% @restaurant.meals.each do |meal| %>
-                  <% if meal.course == 'Main' %>
-                  <% if meal.photo.present? %>
-                    <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('<%= cl_image_path meal.photo, height: 300, width: 400, crop: :fill %>');">
-                  <% else %>
-                    <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(<%= image_path "default_meal.png" %>);">
-                  <% end %>
-                      <button type="button" class="btn btn-ghost " data-toggle="modal" data-target="#modal-<%= meal.id %>">
-                          <%= meal.name %>
-                      </button>
-                      <div class="modal fade" id="modal-<%= meal.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <!-- header -->
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">
-                                  <div class="modal-name">
-                                    <%= meal.name %>
-                                  </div>   -
-                                  <div class="modal-price">
-                                    <%= meal.price %> €
-                                  </div>
-                                </h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-
-                            <!-- body -->
-                            <div class="modal-body">
-                                <%= cl_image_tag meal.photo, height: 300, width: 400, crop: :fill %>
-                                <%= meal.description %>
-                                <br>
-                                <!-- tags -->
-                                <div class="meals-tag">
-                                  <% meal.meal_tags.each do |meal_tag| %>
-                                     <% if meal_tag.tag.status == "allergy" %>
-                                     <div class="allergy"> - <%=meal_tag.tag.title%> </div>
-                                     <% else %>
-                                     <div class="pref"> - <%=meal_tag.tag.title%></div>
-                                     <% end %>
-                                     <% end %>
-                                </div>
-                            </div>
-                            <!-- footer -->
-                            <div class="modal-footer">
-                                <% if current_user == @restaurant.user %>
-                                <%= link_to t('.edit'), edit_restaurant_meal_path(@restaurant, meal), class: 'btn-review' %>
-                                <%= link_to t('.remove'), restaurant_meal_path(@restaurant, meal), class: "btn-delete",
-                            method: :delete,
-                            data: { confirm: t('.conf') } %>
-                                <% end %>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                  <!-- footer -->
+                  <div class="modal-footer">
+                    <% if current_user == @restaurant.user %>
+                      <%= link_to t('.edit'), edit_restaurant_meal_path(@restaurant, meal), class: 'btn-delete' %>
+                      <%= link_to t('.remove'), restaurant_meal_path(@restaurant, meal), class: "btn-review",
+                      method: :delete,
+                      data: { confirm: t('.conf') } %>
+                    <% end %>
                   </div>
-                  <% end %>
-                  <% end %>
-              </div>
-          </div>
-          <div class="dessert">
-              <a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
-                  <h1>
-                      <%= t('.dess') %> +</h1>
-              </a>
-              <div class="collapse" id="collapseExample3">
-                  <div class="cards ">
-                      <% @restaurant.meals.each do |meal| %>
-                      <% if meal.course == 'Dessert' %>
-                      <% if meal.photo.present? %>
-                        <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('<%= cl_image_path meal.photo, height: 300, width: 400, crop: :fill %>');">
-                      <% else %>
-                        <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(<%= image_path "default_meal.png" %>);">
-                      <% end %>
-                        <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal3">
-                            <%= meal.name %>
-                        </button>
-                      </div>
-                        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <!-- header -->
-                              <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">
-                                      <%= meal.name %> -
-                                      <%= meal.price %> €
-                                  </h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                              </div>
-                              <!-- body -->
-                              <div class="modal-body">
-                                  <%= cl_image_tag meal.photo, height: 300, width: 400, crop: :fill %>
-                                  <%= meal.description %>
-                                  <!-- tags -->
-                                  <div class="meals-tag">
-                                    <% meal.meal_tags.each do |meal_tag| %>
-                                      <% if meal_tag.tag.status == "allergy" %>
-                                      <div class="allergy"> <%=meal_tag.tag.title%> </div>
-                                      <% else %>
-                                      <div class="pref"><%=meal_tag.tag.title%></div>
-                                      <% end %>
-                                      <% end %>
-                                  </div>
-                              </div>
-                              <!-- footer -->
-                              <div class="modal-footer">
-                                  <% if current_user == @restaurant.user %>
-                                  <%= link_to t('.edit'), edit_restaurant_meal_path(@restaurant, meal), class: 'btn btn-delete' %>
-                                  <%= link_to t('.remove'), restaurant_meal_path(@restaurant, meal), class: "btn btn-review",
-                                  method: :delete,
-                                  data: { confirm: t('.conf') } %>
-                                  <% end %>
-                              </div>
-                            </div>
-                        </div>
-                      </div>
-                      <% end %>
-                      <% end %>
-                  </div>
+                </div>
               </div>
             </div>
-            <br>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <!-- main course -->
+  <div class="main-course">
+    <a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+      <h1><%= t('.main') %> +</h1>
+    </a>
+    <div class="collapse" id="collapseExample2">
+      <div class="cards ">
+        <% @restaurant.meals.each do |meal| %>
+          <% if meal.course == 'Main' %>
+            <% if meal.photo.present? %>
+              <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('<%= cl_image_path meal.photo, height: 300, width: 400, crop: :fill %>');">
+            <% else %>
+              <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(<%= image_path "default_meal.png" %>);">
+            <% end %>
+            <button type="button" class="btn btn-ghost " data-toggle="modal" data-target="#modal-<%= meal.id %>">
+              <%= meal.name %>
+            </button></div>
+            <div class="modal fade" id="modal-<%= meal.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <!-- header -->
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      <div class="modal-name">
+                        <%= meal.name %>
+                      </div>   -
+                      <div class="modal-price">
+                        <%= meal.price %> €
+                      </div>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <!-- body -->
+                  <div class="modal-body">
+                    <%= cl_image_tag meal.photo, height: 300, width: 400, crop: :fill %>
+                    <br><br>
+                    <%= meal.description %>
+                    <br><br>
+                    <!-- tags -->
+                    <div class="meals-tag">
+                      <% meal.meal_tags.each do |meal_tag| %>
+                        <% if meal_tag.tag.status == "allergy" %>
+                          <div class="allergy"> - <%=meal_tag.tag.title%> </div>
+                        <% else %>
+                          <div class="pref"> - <%=meal_tag.tag.title%></div>
+                        <% end %>
+                      <% end %>
+                    </div>
+                  </div>
+                  <!-- footer -->
+                  <div class="modal-footer">
+                    <% if current_user == @restaurant.user %>
+                      <%= link_to t('.edit'), edit_restaurant_meal_path(@restaurant, meal), class: 'btn-review' %>
+                      <%= link_to t('.remove'), restaurant_meal_path(@restaurant, meal), class: "btn-delete",
+                      method: :delete,
+                      data: { confirm: t('.conf') } %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <!-- dessert -->
+  <div class="dessert">
+    <a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+      <h1><%= t('.dess') %> +</h1>
+    </a>
+    <div class="collapse" id="collapseExample3">
+      <div class="cards ">
+        <% @restaurant.meals.each do |meal| %>
+          <% if meal.course == 'Dessert' %>
+            <% if meal.photo.present? %>
+              <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('<%= cl_image_path meal.photo, height: 300, width: 400, crop: :fill %>');">
+            <% else %>
+              <div class="card-category" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(<%= image_path "default_meal.png" %>);">
+            <% end %>
+            <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#modal-<%= meal.id %>">
+                <%= meal.name %>
+            </button></div>
+            <div class="modal fade" id="modal-<%= meal.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <!-- header -->
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      <%= meal.name %> -
+                      <%= meal.price %> €
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <!-- body -->
+                  <div class="modal-body">
+                    <%= cl_image_tag meal.photo, height: 300, width: 400, crop: :fill %>
+                    <%= meal.description %>
+                    <!-- tags -->
+                    <div class="meals-tag">
+                      <% meal.meal_tags.each do |meal_tag| %>
+                        <% if meal_tag.tag.status == "allergy" %>
+                          <div class="allergy"> <%=meal_tag.tag.title%> </div>
+                        <% else %>
+                          <div class="pref"><%=meal_tag.tag.title%></div>
+                        <% end %>
+                      <% end %>
+                    </div>
+                  </div>
+                  <!-- footer -->
+                  <div class="modal-footer">
+                    <% if current_user == @restaurant.user %>
+                      <%= link_to t('.edit'), edit_restaurant_meal_path(@restaurant, meal), class: 'btn btn-delete' %>
+                      <%= link_to t('.remove'), restaurant_meal_path(@restaurant, meal), class: "btn btn-review",
+                      method: :delete,
+                      data: { confirm: t('.conf') } %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
  <!-- map -->
 <div id="map2" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
@@ -250,8 +253,8 @@
 <!-- delete restaurant -->
 <% if current_user == @restaurant.user %>
   <div class="d-flex">
-   <%= link_to t('.editresto'), edit_restaurant_path(@restaurant), class: 'btn btn-review' %>
-  <%= link_to t('.del'), owners_restaurant_path(@restaurant), class: "btn btn-delete", method: :delete, data: { confirm: t('.rem') } %>
+    <%= link_to t('.editresto'), edit_restaurant_path(@restaurant), class: 'btn btn-review' %>
+    <%= link_to t('.del'), owners_restaurant_path(@restaurant), class: "btn btn-delete", method: :delete, data: { confirm: t('.rem') } %>
   </div>
 <% end %>
 
