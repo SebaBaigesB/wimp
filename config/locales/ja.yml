@@ -35,6 +35,8 @@ ja:
         editresto: "レストランを編集"
         del: "レストランを削除する"
         rem: "親愛なるレストランを本当に削除しますか？"
+        editcomment: "編集する"
+        removecomment: "削除する"
     new:
         name: "名前"
         pic: "写真"

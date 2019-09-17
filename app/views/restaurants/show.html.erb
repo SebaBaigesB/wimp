@@ -18,6 +18,7 @@
       <%= link_to t('.add'), new_restaurant_meal_path(@restaurant), class: "btn btn-review" %>
   </div>
   <% end %>
+
   <!-- menu -->
   <div class="menu">
     <!-- starter -->
@@ -229,7 +230,16 @@
     <li class="title-review"><%= review.user.nickname %></li>
     <li class="contt-review"><%= review.content %></li>
     <% if current_user == review.user %>
-      <%= link_to "edit", edit_restaurant_review_path(@restaurant, review), class: "btn btn-review" %>
+      <div class="d-flex rows">
+        <div class="col-5 pl-8">
+          <%= link_to t('.editcomment'), edit_restaurant_review_path(@restaurant, review), class: "btn btn-review" %>
+        </div>
+        <div class="col-5 pl-8">
+          <%= link_to t('.removecomment'), restaurant_review_path(@restaurant, review), class: "btn btn-review",
+              method: :delete,
+              data: { confirm: t('.conf') } %>
+        </div>
+      </div>
     <% end %>
     <li class="sep-review">-------------------------------------</li>
   </div>

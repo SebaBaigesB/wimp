@@ -36,6 +36,8 @@ es:
         editresto: "Editar restaurante"
         del: "Eliminar tu restaurante"
         rem: "¿De verdad quieres eliminar tu querido restaurante?"
+        editcomment: "Editar"
+        removecomment: "Eliminar"
   new:
         name: "Nombre"
         pic: "Imagen"
