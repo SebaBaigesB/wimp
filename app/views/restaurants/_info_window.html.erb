@@ -1,4 +1,6 @@
-<%= cl_image_tag restaurant.photo, height: 100, width: 100, crop: :fill %>
-<h2><%= restaurant.name %></h2>
-<p><%= restaurant.address %></p>
-<p> <%= restaurant.food_style %> </p>
+<%= link_to restaurant_path(restaurant) do %>
+  <%= cl_image_tag restaurant.photo, height: 100, width: 100, crop: :fill %>
+  <h2><%= restaurant.name %></h2>
+  <p><%= restaurant.address %></p>
+  <p> <%= restaurant.food_style %> </p>
+<% end %>
