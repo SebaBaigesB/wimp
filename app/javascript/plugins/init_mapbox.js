@@ -20,8 +20,8 @@ const addMarkersToMap = (map, markers) => {
     element.className = 'marker';
     element.style.backgroundImage = `url('${marker.image_url}')`;
     element.style.backgroundSize = 'contain';
-    element.style.width = '48px';
-    element.style.height = '48px';
+    element.style.width = '24px';
+    element.style.height = '24px';
 
     new mapboxgl.Marker(element)
       .setLngLat([ marker.lng, marker.lat ])
@@ -30,38 +30,31 @@ const addMarkersToMap = (map, markers) => {
   });
 };
 
-const fitMapToMarkers = (map, markers) => {
-  console.log(markers)
-  const bounds = new mapboxgl.LngLatBounds();
-  markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-  map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
-};
+const fitMapToLocation = (map, geoLoc) => {
+  navigator.geolocation.getCurrentPosition((data) => {
+        const lat = data.coords.latitude;
+        const long = data.coords.longitude;
+        console.log(lat, long);
+        map.flyTo({center: [long, lat], zoom: 14});
+      })
+}
 
 const initMapbox = () => {
   if (mapElement) {
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers);
-    fitMapToMarkers(map, markers);
 
-    // map.on('click', function () {
-    //   map.resize();
-    // });
 
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
     const geoLoc = document.getElementById('geoloc-target');
 
+    fitMapToLocation(map, geoLoc);
+
     geoLoc.addEventListener('click', () => {
-      navigator.geolocation.getCurrentPosition((data) => {
-        const lat = data.coords.latitude;
-        const long = data.coords.longitude;
-        console.log(lat, long);
-        map.flyTo({center: [long, lat], zoom: 14});
-      });
+      fitMapToLocation(map, geoLoc);
     });
   }
 };
-
-
 
 export { initMapbox };
