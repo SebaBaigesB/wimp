@@ -23,7 +23,7 @@ gem 'devise-i18n-views'
 gem 'faker'
 
 gem "google-cloud-translate"
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 gem 'turbolinks', '~> 5.2.0'
 
 group :development do
